@@ -28,7 +28,7 @@
                 <li class="list-group-item" th:each="person:${people}">
                     <span th:text="${person.name}"></span>
                     <span th:text="${person.age}"></span>
-                    <button class="btn" th:onclick="'getName(\'' + ${person.name} + \'');'">获取名字</button>
+                    <button class="btn" th:onclick="'getName(\'' + ${person.name} + '\');'">获取名字</button>
                 </li>
             </ul>
         </div>
@@ -38,10 +38,7 @@
 <script th:src="@{jquery/jquery-3.3.1.min.js}" type="text/javascript"></script>
 <script th:src="@{bootstrap-3.3.7-dist/js/bootstrap.js}"></script>
 <script th:inline="javascript">
-    var single = [[
-    ${singlePerson}
-    }]]
-    ;
+    var single = [[${singlePerson}]];
     console.log(single.name + "/" + single.age);
 
     function getName(name) {

@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication(scanBasePackages = "com.nonono.test", exclude = {DataSourceAutoConfiguration.class})
-@PropertySource("classpath:local.properties")
+@PropertySource(value = "classpath:test.properties", ignoreResourceNotFound = true, encoding = "utf-8")
 public class Application {
 
     public static void main(String[] args) {

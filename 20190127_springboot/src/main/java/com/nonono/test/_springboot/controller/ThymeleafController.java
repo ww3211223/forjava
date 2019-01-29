@@ -4,6 +4,7 @@ import com.nonono.test._springboot.model.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,7 @@ public class ThymeleafController {
 
         model.addAttribute("singlePerson", single);
         model.addAttribute("people", people);
+
         return "index";
     }
 

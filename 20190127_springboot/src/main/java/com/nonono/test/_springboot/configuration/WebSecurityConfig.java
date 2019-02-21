@@ -17,7 +17,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                     .antMatchers("/", "/login").permitAll()     //设置对/和/login不进行拦截
-                    .anyRequest().authenticated()
+                    //.anyRequest().authenticated()
                     .and()
                 .formLogin()
                     .loginPage("/login")                                    //设置登录访问页面

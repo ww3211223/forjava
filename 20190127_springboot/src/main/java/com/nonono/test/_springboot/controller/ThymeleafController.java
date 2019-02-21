@@ -4,7 +4,6 @@ import com.nonono.test._springboot.model.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +14,7 @@ public class ThymeleafController {
 
     @RequestMapping("/")
     public String thymeleafIndex(Model model) {
-        Person single = new Person("帝国", 12);
+        Person single = new Person("帝国", 12, "");
 
         List<Person> people = new ArrayList<Person>();
         people.add(Person.builder().name("吸血鬼").age(1000).build());

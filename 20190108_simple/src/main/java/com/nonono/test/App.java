@@ -1,5 +1,6 @@
 package com.nonono.test;
 
+import com.nonono.test.Sort.QuickSort;
 import com.nonono.test.annotation.DemoConfig;
 import com.nonono.test.annotation.DemoService;
 import com.nonono.test.aop.AopConfig;
@@ -20,6 +21,7 @@ import com.nonono.test.prepost.PrePostConfig;
 import com.nonono.test.scope.DemoPrototypeService;
 import com.nonono.test.scope.DemoSingletonService;
 import com.nonono.test.scope.ScopeConfig;
+import com.nonono.test.Sort.ShellSort;
 import com.nonono.test.taskexecutor.AsyncTaskService;
 import com.nonono.test.taskexecutor.TaskExecutorConfig;
 import com.nonono.test.taskscheduler.TaskSchedulerConfig;
@@ -30,7 +32,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  */
 public class App {
     public static void main(String[] args) {
-        testAnnotation();
+        testQuickSort();
     }
 
     public static void testFindBean() {
@@ -117,5 +119,15 @@ public class App {
         DemoService demoService = context.getBean(DemoService.class);
         demoService.outputResult();
         context.close();
+    }
+
+    public static void testShellSort() {
+        ShellSort shellSort = new ShellSort();
+        shellSort.test();
+    }
+
+    public static void testQuickSort() {
+        QuickSort quickSort = new QuickSort();
+        quickSort.test();
     }
 }

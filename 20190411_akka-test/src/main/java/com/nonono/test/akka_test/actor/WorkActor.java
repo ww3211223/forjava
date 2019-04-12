@@ -34,7 +34,7 @@ public class WorkActor extends AbstractActor {
                 .match(Terminated.class, m -> log.error("{} stopped.", m.actor().path()))
                 .match(ActorMessage.class, m ->
                 {
-                    log.info("workActor receive message:{}", m.message);
+                    log.info("workActor receive message:{}, actorPath:{}", m.getMessage(), this.self().path());
                     workService.work();
                 })
                 .build();

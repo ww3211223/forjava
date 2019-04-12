@@ -1,18 +1,11 @@
 package com.nonono.test.akka_test.message;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 /**
  * 心跳消息
  */
-@Getter
-@Setter
-@AllArgsConstructor
-@Builder
-public class TickMessage extends ActorMessage {
+public class TickMessage {
 
     /**
      * 默认Key

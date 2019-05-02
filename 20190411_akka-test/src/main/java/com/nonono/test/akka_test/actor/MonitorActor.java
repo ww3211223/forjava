@@ -5,6 +5,7 @@ import akka.actor.ActorRef;
 import akka.actor.Terminated;
 import akka.routing.ConsistentHashingPool;
 import akka.routing.ConsistentHashingRouter;
+import akka.routing.RoundRobinGroup;
 import com.nonono.test.akka_test.config.AkkaConfig;
 import com.nonono.test.akka_test.message.ActorMessage;
 import com.nonono.test.akka_test.message.TickMessage;
@@ -13,6 +14,8 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import scala.concurrent.duration.Duration;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Component
@@ -24,7 +27,7 @@ public class MonitorActor extends AbstractActorWithTimers {
 
     private int tickQuantity = 0;
 
-    private int workerActorQuantity = 5;
+    private int workerActorQuantity = 3;
 
     private ActorRef workerRef;
 
@@ -59,14 +62,15 @@ public class MonitorActor extends AbstractActorWithTimers {
 //                .props(AkkaConfig.props(WorkActor.class)), WorkActor.DEFAULT_NAME);
 
         //以配置方式指定路由规则
-        //ActorRef worker = this.getContext().actorOf(FromConfig.getInstance().props(AkkaConfig.props(WorkActor.class)), WorkActor.DEFAULT_NAME);
+//        ActorRef worker = this.getContext().actorOf(FromConfig.getInstance().props(AkkaConfig.props(WorkActor.class)), WorkActor.DEFAULT_NAME);
 
-        //以Group的方式指定路由规则
+        //以Group的方式指定路由规则 不能指定props，导致无法使用spring注入相应的Bean
 //        List<String> paths = Arrays.asList("/user/Supervisor/Monitor/Worker/Worker1", "/user/Supervisor/Monitor/Worker/Worker2", "/user/Supervisor/Monitor/Worker/Worker3");
 //        ActorRef worker = this.getContext().actorOf(new RoundRobinGroup(paths).props(), WorkActor.DEFAULT_NAME);
 
         //以一致性哈希方式路由
-        ActorRef worker = this.getContext().actorOf(new ConsistentHashingPool(workerActorQuantity).props(AkkaConfig.props(WorkActor.class)), WorkActor.DEFAULT_NAME);
+        ActorRef worker = this.getContext().actorOf(new ConsistentHashingPool(workerActorQuantity).withHashMapper(hashMapper)
+                .props(AkkaConfig.props(WorkActor.class)), WorkActor.DEFAULT_NAME);
 
         this.workerRef = worker;
         this.getContext().watch(worker);

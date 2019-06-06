@@ -1,0 +1,11 @@
+<beans>
+    <bean id="productSource" class="com.nonono.test.ioc.ProductSource">
+        <property name="madeContry" value="made in china" />
+    </bean>
+    <bean id="product" class="com.nonono.test.ioc.Product">
+        <property name="name" value="zx300a" />
+        <property name="title" value="sony walkman" />
+        <property name="memo" value="hi-res walkman" />
+        <property name="productSource" ref="productSource" />
+    </bean>
+</beans>

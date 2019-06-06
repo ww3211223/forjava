@@ -1,6 +1,7 @@
 package com.nonono.test;
 
 import com.nonono.test.Sort.QuickSort;
+import com.nonono.test.Sort.ShellSort;
 import com.nonono.test.annotation.DemoConfig;
 import com.nonono.test.annotation.DemoService;
 import com.nonono.test.aop.AopConfig;
@@ -21,18 +22,25 @@ import com.nonono.test.prepost.PrePostConfig;
 import com.nonono.test.scope.DemoPrototypeService;
 import com.nonono.test.scope.DemoSingletonService;
 import com.nonono.test.scope.ScopeConfig;
-import com.nonono.test.Sort.ShellSort;
 import com.nonono.test.taskexecutor.AsyncTaskService;
 import com.nonono.test.taskexecutor.TaskExecutorConfig;
 import com.nonono.test.taskscheduler.TaskSchedulerConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.util.StringUtils;
+
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Hello world!
  */
 public class App {
     public static void main(String[] args) {
-        testQuickSort();
+        testGC();
     }
 
     public static void testFindBean() {
@@ -129,5 +137,11 @@ public class App {
     public static void testQuickSort() {
         QuickSort quickSort = new QuickSort();
         quickSort.test();
+    }
+
+    public static void testGC() {
+        byte[] allocation1, allocation2;
+        allocation1 = new byte[60900*1024];
+        allocation2 = new byte[900*1024];
     }
 }

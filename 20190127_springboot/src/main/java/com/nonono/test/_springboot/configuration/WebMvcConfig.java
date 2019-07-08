@@ -32,13 +32,9 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         MappingJackson2HttpMessageConverter jsonConverter = new MappingJackson2HttpMessageConverter();
         ObjectMapper objectMapper = new ObjectMapper();
         JavaTimeModule module = new JavaTimeModule();
-//        module.addDeserializer(LocalDateTime.class, new CrmLocalDateTimeJsonDeserializer(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
-//        module.addDeserializer(LocalDate.class, new CrmLocalDateJsonDeserializer(DateTimeFormatter.ISO_DATE));
-
         module.addDeserializer(LocalDateTime.class, new LocalDateTimeDeserializer(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
         module.addDeserializer(LocalDate.class, new LocalDateDeserializer(DateTimeFormatter.ISO_DATE));
         objectMapper.registerModule(module);
-
 
         objectMapper.configure(MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES, true);
         objectMapper.configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true);

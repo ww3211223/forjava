@@ -29,14 +29,17 @@ public class App {
 
     public static void testAOP() {
         // 创建一个MethodInvocation 实现类
-        MethodInvocation logTask = () -> System.out.println("log task start");
-        HelloServiceImpl helloServiceImpl = new HelloServiceImpl();
+        MethodInvocation logTask = () -> System.out.println("log task start.");
+        MethodInvocation afterTask = () -> System.out.println("log task end.");
+        HelloService helloServiceImpl = new HelloServiceImpl();
 
         //创建一个Advice
         Advice beforeAdvice = new BeforeAdvice(helloServiceImpl, logTask);
 
         //为目标类对象生成代理
         HelloService helloServiceImplProxy = (HelloService) SimpleAOP.getProxy(helloServiceImpl, beforeAdvice);
+        Advice afterAdvice = new AfterAdvice(helloServiceImplProxy, afterTask);
+        helloServiceImplProxy = (HelloService) SimpleAOP.getProxy(helloServiceImpl, afterAdvice);
         helloServiceImplProxy.work();
     }
 }

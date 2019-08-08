@@ -21,7 +21,7 @@ under the License.
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.yss.flink</groupId>
-	<artifactId>firstFlink</artifactId>
+	<artifactId>20190807_firstFlink</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
 

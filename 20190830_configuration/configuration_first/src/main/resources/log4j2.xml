@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF" monitorInterval="1800" packages="org.apache.logging.log4j.core,com.getsentry.raven.log4j2">
+    <properties>
+        <property name="logs.dir">/home/logs</property>
+        <property name="project.name">20190830_configuration</property>
+        <property name="final.logs.dir">${logs.dir}/${project.name}</property>
+        <property name="pattern">[%level] [%date{ISO8601}] [%logger:%line] [%thread] [] [%X{requestId}] [%X{serverIp}]
+            %msg%n
+        </property>
+    </properties>
+    <appenders>
+
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${pattern}"/>
+        </Console>
+
+    </appenders>
+    <loggers>
+        <Logger name="springfox.documentation" level="WARN"/>
+        <Logger name="org.springframework" level="INFO"/>
+        <Logger name="com.google" level="INFO"/>
+
+        <Root level="INFO">
+            <appender-ref ref="Console"/>
+        </Root>
+    </loggers>
+
+</configuration>

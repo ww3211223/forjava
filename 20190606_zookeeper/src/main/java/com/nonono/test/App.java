@@ -10,6 +10,7 @@ import org.apache.zookeeper.Watcher;
 public class App {
     public static void main(String[] args) {
         testZookeeper();
+        testZookeeperEnd();
         System.out.println("------zookeeper test end.------");
     }
 
@@ -17,6 +18,7 @@ public class App {
         try {
             BaseZookeeper zookeeper = new BaseZookeeper();
             zookeeper.connectZookeeper("192.168.36.78:2181");
+            zookeeper.createNode("/nonono", "first test node.", CreateMode.PERSISTENT);
 
             //注册子节点变更事件
             zookeeper.getZooKeeper().getChildren("/nonono", new Watcher() {
@@ -27,9 +29,11 @@ public class App {
             }, null);
 
             //创建节点，触发子节点变更事件
-            //zookeeper.createNode("/nonono", "first test node.", CreateMode.PERSISTENT);
             zookeeper.createNode("/nonono/first", "first test node.", CreateMode.EPHEMERAL);
-            zookeeper.createNode("/nonono/second", "first test node.", CreateMode.EPHEMERAL);
+            Thread.sleep(1000);
+            zookeeper.createNode("/nonono/second", "second test node.", CreateMode.EPHEMERAL);
+            Thread.sleep(1000);
+            zookeeper.createNode("/nonono/third", "third test node.", CreateMode.EPHEMERAL);
 
             //输出data
             System.out.println("data:" + zookeeper.getData("/nonono/first"));

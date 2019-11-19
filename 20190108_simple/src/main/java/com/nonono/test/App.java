@@ -32,16 +32,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  */
 public class App {
     public static void main(String[] args) {
-        //testGC();
-        String param = null;
-        switch (param) {
-            case "null":
-                System.out.println("null");
-                break;
-            default:
-                System.out.println("default");
-                break;
-        }
+        testAop();
     }
 
     public static void testFindBean() {
@@ -58,6 +49,7 @@ public class App {
 
         demoAnnotationService.add();
         demoMethodService.add();
+        demoMethodService.set(10);
         context.close();
     }
 

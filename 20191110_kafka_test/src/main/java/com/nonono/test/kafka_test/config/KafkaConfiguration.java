@@ -1,5 +1,6 @@
 package com.nonono.test.kafka_test.config;
 
+import com.alibaba.otter.canal.client.kafka.MessageDeserializer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.IntegerDeserializer;
@@ -89,7 +90,7 @@ public class KafkaConfiguration {
         //键的反序列化方式
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, IntegerDeserializer.class);
         //值的反序列化方式
-        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
+        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, MessageDeserializer.class);
 
         return props;
     }

@@ -27,15 +27,15 @@ import com.nonono.test.taskexecutor.TaskExecutorConfig;
 import com.nonono.test.taskscheduler.TaskSchedulerConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.util.concurrent.TimeUnit;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  * Hello world!
  */
 public class App {
     public static void main(String[] args) {
-        testAop();
-        System.out.println(TimeUnit.DAYS.toMillis(1));
+        //testAop();
     }
 
     public static void testFindBean() {

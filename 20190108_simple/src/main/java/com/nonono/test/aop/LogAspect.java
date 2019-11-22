@@ -1,6 +1,5 @@
 package com.nonono.test.aop;
 
-import com.nonono.test.aop.Action;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
@@ -10,16 +9,17 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
 
 @Aspect
 @Component
 public class LogAspect {
 
     @Pointcut("@annotation(com.nonono.test.aop.Action)")
-    public void annotaionPointCut() {
+    public void annotationPointcut() {
     }
 
-    @After("annotaionPointCut()")
+    @After("annotationPointcut()")
     public void after(JoinPoint joinPoint) {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
@@ -27,10 +27,15 @@ public class LogAspect {
         System.out.println("注解式拦截：" + action.name());
     }
 
-    @Before("execution(* com.nonono.test.aop.DemoMethodService.*(..))")
-    public void before(JoinPoint joinpoint) {
+    @Before("execution(* com.nonono.test.aop.DemoMethodService.add(..))")
+    public void beforeAdd(JoinPoint joinpoint) {
         MethodSignature signature = (MethodSignature) joinpoint.getSignature();
         Method method = signature.getMethod();
         System.out.println("方法规则式拦截：" + method.getName());
+    }
+
+    @Before("execution(* com.nonono.test.aop.DemoMethodService.set(..)) && args(number)")
+    public void beforeSet(int number) {
+        System.out.println("方法规则拦截参数测试Before，number:" + number);
     }
 }

@@ -52,6 +52,7 @@ public class App {
 
         demoAnnotationService.add();
         demoMethodService.add();
+        demoMethodService.set(10);
         context.close();
     }
 

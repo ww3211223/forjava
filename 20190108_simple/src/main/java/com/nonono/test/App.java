@@ -27,9 +27,6 @@ import com.nonono.test.taskexecutor.TaskExecutorConfig;
 import com.nonono.test.taskscheduler.TaskSchedulerConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
 /**
  * Hello world!
  */

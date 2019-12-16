@@ -1,5 +1,6 @@
 package com.nonono.test._springboot.configuration;
 
+import com.nonono.test._springboot.util.LocalDateTimeHelper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.convert.converter.Converter;
@@ -10,7 +11,6 @@ import java.time.format.DateTimeFormatter;
 
 @Configuration
 public class DateConfig {
-
     @Bean
     public Converter<String, LocalDate> localDateConverter() {
         return new Converter<String, LocalDate>() {
@@ -26,10 +26,7 @@ public class DateConfig {
         return new Converter<String, LocalDateTime>() {
             @Override
             public LocalDateTime convert(String source) {
-                if (source.indexOf("T") > -1) {
-                    return LocalDateTime.parse(source, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"));
-                }
-                return LocalDateTime.parse(source, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+                return LocalDateTimeHelper.parse(source);
             }
         };
     }

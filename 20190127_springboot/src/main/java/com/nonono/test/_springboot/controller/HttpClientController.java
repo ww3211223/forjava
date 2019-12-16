@@ -1,5 +1,9 @@
 package com.nonono.test._springboot.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.nonono.test._springboot.model.DataResult;
+import com.nonono.test._springboot.model.JsonDataTime;
+import com.nonono.test._springboot.util.JacksonUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -10,19 +14,15 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 import org.springframework.http.HttpHeaders;
 import org.springframework.util.MultiValueMap;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.websocket.server.PathParam;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 /**
  * httpClient测试控制器
@@ -59,7 +59,7 @@ public class HttpClientController {
             CloseableHttpResponse httpResponse = httpClient.execute(request, HttpClientContext.create());
             HttpEntity entity = httpResponse.getEntity();
             String content = EntityUtils.toString(entity, "UTF-8");
-            result = LocalDateTime.parse(content.replace("\"", ""), DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"));
+            result = JSON.parseObject(content, LocalDateTime.class);
             httpResponse.close();
             httpClient.close();
         } catch (IOException e) {
@@ -80,6 +80,27 @@ public class HttpClientController {
         requestHeaders.add("api-version", version.toString());
         org.springframework.http.HttpEntity<MultiValueMap> entity = new org.springframework.http.HttpEntity<>(null, requestHeaders);
         return restTemplate.postForObject("http://localhost:3310/http-client/header", entity, String.class);
+    }
+
+    @RequestMapping("/toJsonList")
+    public List<JsonDataTime> toJsonList(@RequestBody String context) {
+        return JacksonUtils.generic().json2List(context);
+    }
+
+    @RequestMapping("/toJsonList2")
+    public List<JsonDataTime> toJsonList2(@RequestBody String context) {
+        return JacksonUtils.generic().json2List2(context, JsonDataTime.class);
+    }
+
+    @RequestMapping("/toJsonList3")
+    public DataResult<List<JsonDataTime>> toJsonList3(@RequestBody String context) {
+        return JacksonUtils.generic().toNestRefObj(context, DataResult.class, List.class, JsonDataTime.class);
+    }
+
+    @RequestMapping("/toJsonList4")
+    public DataResult<List<JsonDataTime>> toJsonList4(@RequestBody String context) {
+        //使用fastjson
+        return JSON.parseObject(context, DataResult.class);
     }
 
 }

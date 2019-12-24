@@ -12,11 +12,19 @@
 <body>
 
 <p>聊天室</p>
-<p>当前用户：[[${principal != null ? principal.getName() : "匿名"}]]</p>
 <form id="wiselyForm">
     <textarea rows="4" cols="60" name="text"></textarea>
     <input type="submit"/>
 </form>
+
+<div>
+    <input type="text" id="name"/>
+    <input type="button" id="setName" value="设置名称"/>
+</div>
+<div>
+    <input type="button" id="start" value="开启连接" onclick="connect()"/>
+    <input type="button" id="stop" value="关闭连接"/>
+</div>
 
 <div id="output"></div>
 
@@ -32,24 +40,35 @@
         sendSpittle(text);
     });
 
-    var sock = new SockJS("/endpointChat");//连接到endpointChat节点
-    var stomp = Stomp.over(sock);
-    stomp.connect('guest', 'guest', function (frame) {
-        //订阅消息
-        stomp.subscribe("/user/queue/notifications", handleNotification);
-    });
+    var username = "";
+    var stomp = null;
+
+    function connect() {
+        var sock = new SockJS("stomp");//连接到endpointChat节点
+        stomp = Stomp.over(sock);
+        stomp.connect({}, function (frame) {
+            //订阅消息
+            stomp.subscribe('/topic/sub', handleNotification);
+            stomp.subscribe('/user/' + username + '/topic/sub', handleNotification);
+        });
+    }
 
     function handleNotification(message) {
-        $('#output').append("<b>Received: " + message.body + "</b><br />");
+        $('#output').append("<b>Received: " + message + "</b><br />");
     }
 
     function sendSpittle(text) {
-        stomp.send("/chat", {}, text);
+        stomp.send("/topic/message", {}, text);
     }
 
     $('#stop').click(function () {
         sock.close();
     });
+
+    $('#setName').click(function() {
+       username = $('#name').val();
+    });
+
 
 </script>
 </body>

@@ -14,7 +14,9 @@
 <p>聊天室</p>
 <form id="wiselyForm">
     <textarea rows="4" cols="60" name="text"></textarea>
-    <input type="submit"/>
+    <br />
+    <input type="button" value="send" onclick="send()"/>
+    <input type="button" value="sendUser" onclick="sendUser()"/>
 </form>
 
 <div>
@@ -34,35 +36,39 @@
 <script th:src="@{~/js/sockjs.min.js}" type="text/javascript"></script>
 <script th:src="@{~/js/stomp.min.js}" type="text/javascript"></script>
 <script th:inline="javascript">
-    $('#wiselyForm').submit(function (e) {
-        e.preventDefault();
-        var text = $('#wiselyForm').find('textarea[name="text"]').val();
-        sendSpittle(text);
-    });
 
     var username = "";
     var stomp = null;
 
     function connect() {
-        var sock = new SockJS("stomp");//连接到endpointChat节点
+        var sock = new SockJS("http://localhost:3560/stomp");//连接到endpointChat节点
         stomp = Stomp.over(sock);
-        stomp.connect({}, function (frame) {
+        stomp.connect('guest', 'guest', function (frame) {
             //订阅消息
-            stomp.subscribe('/topic/sub', handleNotification);
-            stomp.subscribe('/user/' + username + '/topic/sub', handleNotification);
+            stomp.subscribe('/topic/send', handleNotification);
+            stomp.subscribe('/topic/answer', handleNotification);
+            stomp.subscribe('/user/queue/sendUser', handleNotification);
+            stomp.subscribe('/user/queue/answer', handleNotification);
+            //stomp.subscribe('/user/' + username + '/topic/sub', handleNotification);
         });
     }
 
     function handleNotification(message) {
-        $('#output').append("<b>Received: " + message + "</b><br />");
+        $('#output').append("<b>Received: " + message.body + "</b><br />");
     }
 
-    function sendSpittle(text) {
-        stomp.send("/topic/message", {}, text);
+    function send() {
+        var text = $('#wiselyForm').find('textarea[name="text"]').val();
+        stomp.send("/app/send", {}, text);
+    }
+
+    function sendUser() {
+        var text = $('#wiselyForm').find('textarea[name="text"]').val();
+        stomp.send("/app/sendUser", {}, text);
     }
 
     $('#stop').click(function () {
-        sock.close();
+        stomp.disconnect();
     });
 
     $('#setName').click(function() {

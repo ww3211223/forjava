@@ -1,5 +1,6 @@
 package com.nonono.test.stomp.configuration;
 
+import com.nonono.test.stomp.interceptors.HandleSharkeInterceptors;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
@@ -25,20 +26,20 @@ public class StompConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.addEndpoint("/stomp")
-                .setHandshakeHandler(new DefaultHandshakeHandler() {
-                    @Override
-                    protected Principal determineUser(ServerHttpRequest request, WebSocketHandler wsHandler, Map<String, Object> attributes) {
-                        //将客户端标识封装为Principal对象，从而让服务端能够通过getName()方法找到指定客户端
-                        Object o = attributes.get("name");
-                        if (o == null) {
-                            return new FastPrincipal(null);
-                        }
-
-                        return new FastPrincipal(o.toString());
-                    }
-                })
+//                .setHandshakeHandler(new DefaultHandshakeHandler() {
+//                    @Override
+//                    protected Principal determineUser(ServerHttpRequest request, WebSocketHandler wsHandler, Map<String, Object> attributes) {
+//                        //将客户端标识封装为Principal对象，从而让服务端能够通过getName()方法找到指定客户端
+//                        Object o = attributes.get("name");
+//                        if (o == null) {
+//                            return new FastPrincipal(null);
+//                        }
+//
+//                        return new FastPrincipal(o.toString());
+//                    }
+//                })
                 //添加socket拦截器，用于从请求中获取客户端标识参数
-                .addInterceptors()
+                //.addInterceptors(new HandleSharkeInterceptors())
                 .withSockJS();
     }
 

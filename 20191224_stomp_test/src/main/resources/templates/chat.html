@@ -43,18 +43,24 @@
     function connect() {
         var sock = new SockJS("http://localhost:3560/stomp");//连接到endpointChat节点
         stomp = Stomp.over(sock);
-        stomp.connect('guest', 'guest', function (frame) {
+        stomp.connect({login: username}, function (frame) {
             //订阅消息
             stomp.subscribe('/topic/send', handleNotification);
             stomp.subscribe('/topic/answer', handleNotification);
             stomp.subscribe('/user/queue/sendUser', handleNotification);
             stomp.subscribe('/user/queue/answer', handleNotification);
-            //stomp.subscribe('/user/' + username + '/topic/sub', handleNotification);
         });
     }
 
     function handleNotification(message) {
         $('#output').append("<b>Received: " + message.body + "</b><br />");
+        if(window.Notification) {
+            if (Notification.permission == 'granted') {
+               var notification = new Notification("收到消息", { body: message.body });
+            } else {
+                Notification.requestPermission();
+            }
+        }
     }
 
     function send() {

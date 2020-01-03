@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.nonono.test</groupId>
-	<artifactId>stomp-test</artifactId>
+	<artifactId>stomp_test_two</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>com.nonono.test.stomp</name>
-	<description>stomp test project</description>
+	<name>stomp_test_two</name>
+	<description>stomp_test_two</description>
 
 	<properties>
 		<java.version>1.8</java.version>

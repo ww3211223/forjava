@@ -27,12 +27,16 @@ import com.nonono.test.taskexecutor.TaskExecutorConfig;
 import com.nonono.test.taskscheduler.TaskSchedulerConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.text.MessageFormat;
+
 /**
  * Hello world!
  */
 public class App {
     public static void main(String[] args) {
         //testAop();
+        System.out.println(String.format("%s|%d", 1000L, 9999L));
+        System.out.println(MessageFormat.format("{0}|{1}", 1000L, 999L));
     }
 
     public static void testFindBean() {

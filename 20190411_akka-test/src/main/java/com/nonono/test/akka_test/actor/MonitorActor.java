@@ -5,7 +5,6 @@ import akka.actor.ActorRef;
 import akka.actor.Terminated;
 import akka.routing.ConsistentHashingPool;
 import akka.routing.ConsistentHashingRouter;
-import akka.routing.RoundRobinGroup;
 import com.nonono.test.akka_test.config.AkkaConfig;
 import com.nonono.test.akka_test.message.ActorMessage;
 import com.nonono.test.akka_test.message.TickMessage;
@@ -14,8 +13,6 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import scala.concurrent.duration.Duration;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Component

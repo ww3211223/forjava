@@ -16,6 +16,7 @@ import com.nonono.test.event.DemoPublisher;
 import com.nonono.test.event.EventConfig;
 import com.nonono.test.findBean.DiConfig;
 import com.nonono.test.findBean.UseFunctionService;
+import com.nonono.test.generic.TestGeneric;
 import com.nonono.test.prepost.BeanWayService;
 import com.nonono.test.prepost.JSR250WayService;
 import com.nonono.test.prepost.PrePostConfig;
@@ -27,16 +28,15 @@ import com.nonono.test.taskexecutor.TaskExecutorConfig;
 import com.nonono.test.taskscheduler.TaskSchedulerConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.text.MessageFormat;
+import java.lang.reflect.Type;
 
 /**
  * Hello world!
  */
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchFieldException {
         //testAop();
-        System.out.println(String.format("%s|%d", 1000L, 9999L));
-        System.out.println(MessageFormat.format("{0}|{1}", 1000L, 999L));
+        testGenericType();
     }
 
     public static void testFindBean() {
@@ -140,5 +140,18 @@ public class App {
         byte[] allocation1, allocation2;
         allocation1 = new byte[60900 * 1024];
         allocation2 = new byte[900 * 1024];
+    }
+
+    /**
+     * 测试获取泛型类型
+     *
+     * @throws NoSuchFieldException
+     */
+    public static void testGenericType() throws NoSuchFieldException {
+        TestGeneric<String> test = new TestGeneric<>();
+        test.setContext("abc");
+
+        Type type = test.getClass().getDeclaredField("context").getGenericType();
+        System.out.println("testGenericType：" + type);
     }
 }

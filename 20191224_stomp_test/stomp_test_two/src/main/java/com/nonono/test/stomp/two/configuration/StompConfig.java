@@ -51,14 +51,14 @@ public class StompConfig implements WebSocketMessageBrokerConfigurer {
         //服务端通知客户端的前缀，默认/user
         registry.setUserDestinationPrefix("/user");
         //客户端订阅消息的请求前缀，topic用于广播推送，queue用于点对点推送
-        //registry.enableSimpleBroker("/topic", "/queue");
-        registry.enableStompBrokerRelay("/topic", "/queue")
-                .setRelayHost("127.0.0.1")
-                .setRelayPort(61613)
-                .setSystemLogin("guest")
-                .setSystemPasscode("guest")
-                .setClientLogin("guest")
-                .setClientPasscode("guest");
+        registry.enableSimpleBroker("/topic", "/queue");
+//        registry.enableStompBrokerRelay("/topic", "/queue")
+//                .setRelayHost("127.0.0.1")
+//                .setRelayPort(61613)
+//                .setSystemLogin("guest")
+//                .setSystemPasscode("guest")
+//                .setClientLogin("guest")
+//                .setClientPasscode("guest");
     }
 
     /**

@@ -9,13 +9,17 @@ public class CustomBeanPostProcessor implements BeanPostProcessor {
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println(String.format("CustomBeanPostProcessor.postProcessBeforeInitialization()#beanName:%s", beanName));
+        if (bean instanceof TestService) {
+            System.out.println(String.format("CustomBeanPostProcessor.postProcessBeforeInitialization()#beanName:%s", beanName));
+        }
         return bean;
     }
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println(String.format("CustomBeanPostProcessor.postProcessAfterInitialization()#beanName:%s", beanName));
+        if (bean instanceof TestService) {
+            System.out.println(String.format("CustomBeanPostProcessor.postProcessAfterInitialization()#beanName:%s", beanName));
+        }
         return bean;
     }
 }

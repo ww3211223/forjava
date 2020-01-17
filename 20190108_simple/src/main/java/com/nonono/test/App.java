@@ -1,5 +1,6 @@
 package com.nonono.test;
 
+import com.google.common.collect.Lists;
 import com.nonono.test.Sort.QuickSort;
 import com.nonono.test.Sort.ShellSort;
 import com.nonono.test.annotation.DemoConfig;
@@ -29,6 +30,7 @@ import com.nonono.test.taskscheduler.TaskSchedulerConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.lang.reflect.Type;
+import java.util.List;
 
 /**
  * Hello world!
@@ -36,7 +38,9 @@ import java.lang.reflect.Type;
 public class App {
     public static void main(String[] args) throws NoSuchFieldException {
         //testAop();
-        testGenericType();
+        //testGenericType();
+
+        System.out.println(0.05f+0.01f);
     }
 
     public static void testFindBean() {

@@ -1,6 +1,5 @@
 package com.nonono.test;
 
-import com.google.common.collect.Lists;
 import com.nonono.test.Sort.QuickSort;
 import com.nonono.test.Sort.ShellSort;
 import com.nonono.test.annotation.DemoConfig;
@@ -30,7 +29,7 @@ import com.nonono.test.taskscheduler.TaskSchedulerConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.lang.reflect.Type;
-import java.util.List;
+import java.time.LocalDate;
 
 /**
  * Hello world!
@@ -40,7 +39,7 @@ public class App {
         //testAop();
         //testGenericType();
 
-        System.out.println(0.05f+0.01f);
+        System.out.println(0.05f + 0.01f);
     }
 
     public static void testFindBean() {

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nonono.test.mybaits.IProductDao">
+    <select id="getProducts" parameterType="map" resultType="com.nonono.test.mybaits.ProductModel">
+        select * from product
+        <where>
+            id = #{id}
+        </where>
+    </select>
+</mapper>
+

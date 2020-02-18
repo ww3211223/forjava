@@ -13,6 +13,6 @@ public class TestJob implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         ProductModel productModel = productDao.getProducts(1);
-        System.out.println("productName: " + productModel.getName());
+        System.out.println("TestJob productName: " + productModel.getName());
     }
 }

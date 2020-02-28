@@ -11,11 +11,18 @@ public class TestJob implements ApplicationRunner {
     @Autowired
     private TestRedis testRedis;
 
+    @Autowired
+    private TestRedissonLock redissonLockTest;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
 //        testRedis.testStr();
 //        testRedis.testObj();
 //        testRedis.testIncr();
-        testRedis.testRedisLock();
+//        testRedis.testRedisLock();
+//        testRedis.testList();
+//        testRedis.testSet();
+        redissonLockTest.testReentrantLock(5);
+        redissonLockTest.testReentrantLock(5);
     }
 }

@@ -1,5 +1,6 @@
 package com.nonono.test.redis;
 
+import com.alibaba.fastjson.JSON;
 import com.nonono.test.redis.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -46,10 +47,13 @@ public class TestRedis {
     }
 
     public void testObj() {
-        Product product = new Product(1, "加达里", LocalDateTime.now());
+        String key = "NONONO:TEST:PROJECT";
+
+        Product product = new Product(1, "艾查恩", LocalDateTime.now());
         ValueOperations<String, Product> operations = redisTemplate.opsForValue();
-        operations.set("product", product, 10, TimeUnit.SECONDS);
-        System.out.println("testRedis.testObj():" + redisTemplate.hasKey("product"));
+        operations.set(key, product, 10, TimeUnit.SECONDS);
+        System.out.println("testRedis.testObj() hasKey:" + redisTemplate.hasKey(key));
+        System.out.println(JSON.toJSON(redisTemplate.opsForValue().get(key)));
     }
 
     public void testRedisLock() {

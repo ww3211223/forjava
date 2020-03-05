@@ -1,5 +1,6 @@
 package com.nonono.test;
 
+import com.google.common.collect.Maps;
 import com.nonono.test.Sort.QuickSort;
 import com.nonono.test.Sort.ShellSort;
 import com.nonono.test.annotation.DemoConfig;
@@ -11,6 +12,7 @@ import com.nonono.test.aware.AwareConfig;
 import com.nonono.test.aware.AwareService;
 import com.nonono.test.conditional.ConditionConfig;
 import com.nonono.test.conditional.ListService;
+import com.nonono.test.delayQueue.TestDelayQueue;
 import com.nonono.test.el.ElConfig;
 import com.nonono.test.event.DemoPublisher;
 import com.nonono.test.event.EventConfig;
@@ -29,7 +31,9 @@ import com.nonono.test.taskscheduler.TaskSchedulerConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.lang.reflect.Type;
-import java.time.LocalDate;
+import java.util.Map;
+import java.util.Random;
+import java.util.TreeMap;
 
 /**
  * Hello world!
@@ -38,6 +42,8 @@ public class App {
     public static void main(String[] args) throws NoSuchFieldException {
         //testAop();
         //testGenericType();
+        //testTreeMap();
+        testDelayQueue();
 
         System.out.println(0.05f + 0.01f);
     }
@@ -156,5 +162,29 @@ public class App {
 
         Type type = test.getClass().getDeclaredField("context").getGenericType();
         System.out.println("testGenericType：" + type);
+    }
+
+    /**
+     * 测试TreeMap
+     */
+    public static void testTreeMap() {
+        TreeMap<Integer, String> treeMap = Maps.newTreeMap();
+        treeMap.put(654, "test");
+        Random random = new Random();
+        for (int i = 0; i < 20; i++) {
+            int key = random.nextInt(1000);
+            treeMap.put(key, "sort:" + i);
+        }
+        for (Map.Entry<Integer, String> item : treeMap.entrySet()) {
+            System.out.println("key:" + item.getKey() + ",value:" + item.getValue());
+        }
+
+        System.out.println("testKey value:" + treeMap.get(654));
+        System.out.println(treeMap);
+    }
+
+    public static void testDelayQueue() {
+        TestDelayQueue delayQueue = new TestDelayQueue();
+        delayQueue.test();
     }
 }

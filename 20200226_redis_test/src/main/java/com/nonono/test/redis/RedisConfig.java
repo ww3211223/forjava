@@ -12,7 +12,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.RedisSerializer;
+import org.springframework.data.redis.serializer.SerializationException;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
+import org.springframework.util.SerializationUtils;
+
+import java.io.Serializable;
 
 
 @Configuration
@@ -25,7 +30,32 @@ public class RedisConfig {
 
         GenericJackson2JsonRedisSerializer redisSerializer = new GenericJackson2JsonRedisSerializer();
         redisTemplate.setKeySerializer(new StringRedisSerializer());
-        redisTemplate.setDefaultSerializer(redisSerializer);
+        //redisTemplate.setDefaultSerializer(redisSerializer);
+        redisTemplate.setValueSerializer(new RedisSerializer<Object>() {
+            @Override
+            public byte[] serialize(Object o) throws SerializationException {
+                if (o == null) {
+                    return new byte[0];
+                }
+                if (!(o instanceof Serializable)) {
+                    throw new IllegalArgumentException("RedisSerializer.serialize requires a Serializable payload "
+                            + "but received an object of type [" + o.getClass().getName() + "]");
+                }
+
+                return SerializationUtils.serialize(o);
+            }
+
+            @Override
+            public Object deserialize(byte[] bytes) throws SerializationException {
+                if (bytes == null || bytes.length == 0) {
+                    return null;
+                }
+
+                return SerializationUtils.deserialize(bytes);
+            }
+        });
+
+
         return redisTemplate;
     }
 

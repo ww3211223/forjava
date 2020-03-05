@@ -44,8 +44,6 @@ public class App {
         //testGenericType();
         //testTreeMap();
         testDelayQueue();
-
-        System.out.println(0.05f + 0.01f);
     }
 
     public static void testFindBean() {

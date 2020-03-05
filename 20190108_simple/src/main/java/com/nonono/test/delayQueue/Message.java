@@ -5,15 +5,15 @@ import java.util.concurrent.TimeUnit;
 
 public class Message implements Delayed {
 
-    private int time;
-
+    private long time;
+    private long nanoTime;
     private String data;
 
     private final long now() {
         return System.nanoTime();
     }
 
-    public int getTime() {
+    public long getTime() {
         return this.time;
     }
 
@@ -21,14 +21,16 @@ public class Message implements Delayed {
         return this.data;
     }
 
-    public Message(int time, String data) {
+    public Message(long time, String data) {
         this.time = time;
+        this.nanoTime = now() + (time * 1000 * 1000);
         this.data = data;
     }
 
     @Override
     public long getDelay(TimeUnit unit) {
-        return unit.convert(time * 1000000000 - now(), TimeUnit.NANOSECONDS);
+        long delay = unit.convert(nanoTime - now(), TimeUnit.NANOSECONDS);
+        return delay;
     }
 
     @Override

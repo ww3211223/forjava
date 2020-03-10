@@ -19,6 +19,7 @@ import com.nonono.test.event.EventConfig;
 import com.nonono.test.findBean.DiConfig;
 import com.nonono.test.findBean.UseFunctionService;
 import com.nonono.test.generic.TestGeneric;
+import com.nonono.test.guavaCache.TestGuavaCache;
 import com.nonono.test.prepost.BeanWayService;
 import com.nonono.test.prepost.JSR250WayService;
 import com.nonono.test.prepost.PrePostConfig;
@@ -43,7 +44,8 @@ public class App {
         //testAop();
         //testGenericType();
         //testTreeMap();
-        testDelayQueue();
+        //testDelayQueue();
+        testGuavaCache();
     }
 
     public static void testFindBean() {
@@ -184,5 +186,10 @@ public class App {
     public static void testDelayQueue() {
         TestDelayQueue delayQueue = new TestDelayQueue();
         delayQueue.test();
+    }
+
+    public static void testGuavaCache() {
+        TestGuavaCache test = new TestGuavaCache();
+        test.test();
     }
 }

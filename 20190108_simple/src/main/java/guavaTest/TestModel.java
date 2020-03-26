@@ -1,4 +1,4 @@
-package com.nonono.test.guavaCache;
+package guavaTest;
 
 import lombok.*;
 

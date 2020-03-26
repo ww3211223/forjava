@@ -19,7 +19,6 @@ import com.nonono.test.event.EventConfig;
 import com.nonono.test.findBean.DiConfig;
 import com.nonono.test.findBean.UseFunctionService;
 import com.nonono.test.generic.TestGeneric;
-import com.nonono.test.guavaCache.TestGuavaCache;
 import com.nonono.test.prepost.BeanWayService;
 import com.nonono.test.prepost.JSR250WayService;
 import com.nonono.test.prepost.PrePostConfig;
@@ -29,6 +28,8 @@ import com.nonono.test.scope.ScopeConfig;
 import com.nonono.test.taskexecutor.AsyncTaskService;
 import com.nonono.test.taskexecutor.TaskExecutorConfig;
 import com.nonono.test.taskscheduler.TaskSchedulerConfig;
+import com.nonono.test.threadTest.WaitNotify;
+import guavaTest.*;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.lang.reflect.Type;
@@ -45,7 +46,12 @@ public class App {
         //testGenericType();
         //testTreeMap();
         //testDelayQueue();
-        testGuavaCache();
+        //testGuavaCache();
+        //testWaitNotify();
+        //testGuava();
+        //testGuavaPredicateAndFilter();
+        testGuavaUtil();
+        //testEventBus();
     }
 
     public static void testFindBean() {
@@ -190,6 +196,31 @@ public class App {
 
     public static void testGuavaCache() {
         TestGuavaCache test = new TestGuavaCache();
+        test.test();
+    }
+
+    public static void testWaitNotify() {
+        WaitNotify waitNotify = new WaitNotify();
+        waitNotify.test();
+    }
+
+    public static void testGuava() {
+        GuavaCollectionTest guavaCollectionTest = new GuavaCollectionTest();
+        guavaCollectionTest.test();
+    }
+
+    public static void testGuavaPredicateAndFilter() {
+        GuavaPredicateAndFilterTest filterTest = new GuavaPredicateAndFilterTest();
+        filterTest.test();
+    }
+
+    public static void testGuavaUtil() {
+        GuavaUtilTest test = new GuavaUtilTest();
+        test.test();
+    }
+
+    public static void testEventBus() {
+        EventBusTest test = new EventBusTest();
         test.test();
     }
 }

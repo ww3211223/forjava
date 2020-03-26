@@ -1,4 +1,4 @@
-package com.nonono.test.guavaCache;
+package guavaTest;
 
 import com.alibaba.fastjson.JSON;
 import com.google.common.cache.Cache;

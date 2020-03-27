@@ -2,6 +2,8 @@ package guavaTest;
 
 import com.google.common.collect.*;
 
+import java.util.Set;
+
 /**
  * guava集合测试
  */
@@ -12,6 +14,7 @@ public class GuavaCollectionTest {
         testMulti();
         testTable();
         testRangeSet();
+        testSets();
     }
 
     /**
@@ -43,6 +46,11 @@ public class GuavaCollectionTest {
         System.out.println("multiset: " + multiset);
         System.out.println("multiset.count(30): " + multiset.count(30));
         System.out.println("multiset.size(): " + multiset.size());
+
+        ImmutableSet<String> digits = ImmutableSet.of("aa", "bb", "ccc", "dddd", "ffff");
+        Multimap<Integer, String> multimap2 = Multimaps.index(digits, String::length);
+
+        System.out.println("multimap2：" + multimap2);
     }
 
     private void testTable() {
@@ -81,5 +89,20 @@ public class GuavaCollectionTest {
         System.out.println("rangeSet.encloses1: " + rangeSet.encloses(Range.openClosed(3, 10)));
         System.out.println("rangeSet.encloses2: " + rangeSet.encloses(Range.openClosed(5, 12)));
         System.out.println("rangeSet.span(): " + rangeSet.span());
+    }
+
+    /**
+     * 测试Set交集、并集、差集
+     */
+    private void testSets() {
+        Set<Integer> set1 = Sets.newHashSet(1, 2, 3, 5, 8);
+        Set<Integer> set2 = Sets.newHashSet(2, 4, 6, 8, 10);
+
+        //并集
+        System.out.println("并集：" + Sets.union(set1, set2));
+        //差集
+        System.out.println("差集：" + Sets.difference(set1, set2));
+        //交集
+        System.out.println("交集：" + Sets.intersection(set1, set2));
     }
 }

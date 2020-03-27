@@ -48,10 +48,11 @@ public class App {
         //testDelayQueue();
         //testGuavaCache();
         //testWaitNotify();
-        //testGuava();
+        //testGuavaCollection();
         //testGuavaPredicateAndFilter();
-        testGuavaUtil();
+        //testGuavaUtil();
         //testEventBus();
+        testGuavaReflection();
     }
 
     public static void testFindBean() {
@@ -204,7 +205,7 @@ public class App {
         waitNotify.test();
     }
 
-    public static void testGuava() {
+    public static void testGuavaCollection() {
         GuavaCollectionTest guavaCollectionTest = new GuavaCollectionTest();
         guavaCollectionTest.test();
     }
@@ -222,5 +223,10 @@ public class App {
     public static void testEventBus() {
         EventBusTest test = new EventBusTest();
         test.test();
+    }
+
+    public static void testGuavaReflection() {
+        GuavaReflectionTest reflectionTest = new GuavaReflectionTest();
+        reflectionTest.test();
     }
 }

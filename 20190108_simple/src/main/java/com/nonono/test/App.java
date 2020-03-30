@@ -52,7 +52,8 @@ public class App {
         //testGuavaPredicateAndFilter();
         //testGuavaUtil();
         //testEventBus();
-        testGuavaReflection();
+        //testGuavaReflection();
+        testHashing();
     }
 
     public static void testFindBean() {
@@ -228,5 +229,10 @@ public class App {
     public static void testGuavaReflection() {
         GuavaReflectionTest reflectionTest = new GuavaReflectionTest();
         reflectionTest.test();
+    }
+
+    public static void testHashing() {
+        GuavaHashingTest hashingTest = new GuavaHashingTest();
+        hashingTest.test();
     }
 }

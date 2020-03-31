@@ -12,6 +12,7 @@ import com.nonono.test.aware.AwareConfig;
 import com.nonono.test.aware.AwareService;
 import com.nonono.test.conditional.ConditionConfig;
 import com.nonono.test.conditional.ListService;
+import com.nonono.test.concurrentTest.ConnectionPoolTest;
 import com.nonono.test.delayQueue.TestDelayQueue;
 import com.nonono.test.el.ElConfig;
 import com.nonono.test.event.DemoPublisher;
@@ -19,6 +20,7 @@ import com.nonono.test.event.EventConfig;
 import com.nonono.test.findBean.DiConfig;
 import com.nonono.test.findBean.UseFunctionService;
 import com.nonono.test.generic.TestGeneric;
+import com.nonono.test.guavaTest.*;
 import com.nonono.test.prepost.BeanWayService;
 import com.nonono.test.prepost.JSR250WayService;
 import com.nonono.test.prepost.PrePostConfig;
@@ -29,7 +31,6 @@ import com.nonono.test.taskexecutor.AsyncTaskService;
 import com.nonono.test.taskexecutor.TaskExecutorConfig;
 import com.nonono.test.taskscheduler.TaskSchedulerConfig;
 import com.nonono.test.threadTest.WaitNotify;
-import guavaTest.*;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.lang.reflect.Type;
@@ -53,7 +54,8 @@ public class App {
         //testGuavaUtil();
         //testEventBus();
         //testGuavaReflection();
-        testHashing();
+        //testHashing();
+        testConnectionPool();
     }
 
     public static void testFindBean() {
@@ -234,5 +236,14 @@ public class App {
     public static void testHashing() {
         GuavaHashingTest hashingTest = new GuavaHashingTest();
         hashingTest.test();
+    }
+
+    public static void testConnectionPool() {
+        ConnectionPoolTest poolTest = new ConnectionPoolTest();
+        try {
+            poolTest.test();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 }

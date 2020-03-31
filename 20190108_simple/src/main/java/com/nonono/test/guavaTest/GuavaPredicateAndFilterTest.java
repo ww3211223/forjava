@@ -1,4 +1,4 @@
-package guavaTest;
+package com.nonono.test.guavaTest;
 
 import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Collections2;

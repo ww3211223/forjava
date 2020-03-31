@@ -1,4 +1,4 @@
-package guavaTest;
+package com.nonono.test.guavaTest;
 
 import com.google.common.base.Charsets;
 import com.google.common.hash.HashCode;

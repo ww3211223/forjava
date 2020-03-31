@@ -1,4 +1,4 @@
-package guavaTest;
+package com.nonono.test.guavaTest;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
@@ -25,7 +25,7 @@ public class GuavaReflectionTest {
         List<String> classNames = Lists.newArrayList();
         try {
             ClassPath classPath = ClassPath.from(this.getClass().getClassLoader());
-            for (ClassPath.ClassInfo classInfo : classPath.getTopLevelClasses("guavaTest")) {
+            for (ClassPath.ClassInfo classInfo : classPath.getTopLevelClasses("com.nonono.test.guavaTest")) {
                 classNames.add(classInfo.getSimpleName());
                 AbstractBeanDefinition beanDefinition = BeanDefinitionBuilder.genericBeanDefinition(classInfo.getName()).getBeanDefinition();
                 if(beanDefinition == null) {

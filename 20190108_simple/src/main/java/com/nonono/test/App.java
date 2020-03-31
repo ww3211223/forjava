@@ -10,9 +10,10 @@ import com.nonono.test.aop.DemoAnnotationService;
 import com.nonono.test.aop.DemoMethodService;
 import com.nonono.test.aware.AwareConfig;
 import com.nonono.test.aware.AwareService;
+import com.nonono.test.concurrentTest.ConnectionPoolTest;
+import com.nonono.test.concurrentTest.ThreadPoolTest;
 import com.nonono.test.conditional.ConditionConfig;
 import com.nonono.test.conditional.ListService;
-import com.nonono.test.concurrentTest.ConnectionPoolTest;
 import com.nonono.test.delayQueue.TestDelayQueue;
 import com.nonono.test.el.ElConfig;
 import com.nonono.test.event.DemoPublisher;
@@ -55,7 +56,8 @@ public class App {
         //testEventBus();
         //testGuavaReflection();
         //testHashing();
-        testConnectionPool();
+        //testConnectionPool();
+        testThreadPool();
     }
 
     public static void testFindBean() {
@@ -245,5 +247,10 @@ public class App {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+    }
+
+    public static void testThreadPool() {
+        ThreadPoolTest threadPoolTest = new ThreadPoolTest();
+        threadPoolTest.test();
     }
 }

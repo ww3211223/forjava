@@ -11,6 +11,7 @@ import com.nonono.test.aop.DemoMethodService;
 import com.nonono.test.aware.AwareConfig;
 import com.nonono.test.aware.AwareService;
 import com.nonono.test.concurrentTest.ConnectionPoolTest;
+import com.nonono.test.concurrentTest.HttpServerTest;
 import com.nonono.test.concurrentTest.ThreadPoolTest;
 import com.nonono.test.conditional.ConditionConfig;
 import com.nonono.test.conditional.ListService;
@@ -57,7 +58,8 @@ public class App {
         //testGuavaReflection();
         //testHashing();
         //testConnectionPool();
-        testThreadPool();
+        //testThreadPool();
+        testHttpServer();
     }
 
     public static void testFindBean() {
@@ -252,5 +254,9 @@ public class App {
     public static void testThreadPool() {
         ThreadPoolTest threadPoolTest = new ThreadPoolTest();
         threadPoolTest.test();
+    }
+
+    public static void testHttpServer() {
+        HttpServerTest.test();
     }
 }

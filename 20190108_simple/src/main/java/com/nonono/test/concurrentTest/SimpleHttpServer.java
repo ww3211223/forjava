@@ -99,6 +99,8 @@ public class SimpleHttpServer {
                 out.println("HTTP/1.1 500");
                 out.println("");
                 out.flush();
+
+                System.out.println(String.format("处理Http请求异常，异常信息：%s", e.getMessage()));
             } finally {
                 close(fileReader, in, socketReader, out, socket);
             }

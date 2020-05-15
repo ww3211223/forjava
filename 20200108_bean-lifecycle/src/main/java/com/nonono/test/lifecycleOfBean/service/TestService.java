@@ -18,12 +18,12 @@ public class TestService implements InitializingBean, DisposableBean, Applicatio
 
     @PostConstruct
     public void initPostConstruct() {
-        System.out.println("TestService.initPostConstruct()");
+        System.out.println("TestService.@PostConstruct");
     }
 
     @PreDestroy
     public void preDestroy() {
-        System.out.println("TestService.preDestroy()");
+        System.out.println("TestService.@PreDestroy");
     }
 
     /**
@@ -33,7 +33,7 @@ public class TestService implements InitializingBean, DisposableBean, Applicatio
      */
     @Override
     public void destroy() throws Exception {
-        System.out.println("TestService.destroy()");
+        System.out.println("TestService DisposableBean.destroy()");
     }
 
     /**
@@ -43,7 +43,7 @@ public class TestService implements InitializingBean, DisposableBean, Applicatio
      */
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("TestService.afterPropertiesSet()");
+        System.out.println("TestService InitializingBean.afterPropertiesSet()");
     }
 
     public void destroyMethod() throws Exception {

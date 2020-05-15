@@ -23,6 +23,7 @@ import com.nonono.test.findBean.DiConfig;
 import com.nonono.test.findBean.UseFunctionService;
 import com.nonono.test.generic.TestGeneric;
 import com.nonono.test.guavaTest.*;
+import com.nonono.test.lockTest.LockTest;
 import com.nonono.test.prepost.BeanWayService;
 import com.nonono.test.prepost.JSR250WayService;
 import com.nonono.test.prepost.PrePostConfig;
@@ -36,9 +37,12 @@ import com.nonono.test.threadTest.WaitNotify;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.lang.reflect.Type;
+import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.Random;
 import java.util.TreeMap;
+import java.util.concurrent.atomic.AtomicIntegerArray;
 
 /**
  * Hello world!
@@ -48,7 +52,7 @@ public class App {
         //testAop();
         //testGenericType();
         //testTreeMap();
-        //testDelayQueue();
+        testDelayQueue();
         //testGuavaCache();
         //testWaitNotify();
         //testGuavaCollection();
@@ -59,7 +63,14 @@ public class App {
         //testHashing();
         //testConnectionPool();
         //testThreadPool();
-        testHttpServer();
+        //testHttpServer();
+        //testLock();
+        //testAtomicArray();
+//        LocalDateTime start = LocalDateTime.of(2020, 01, 01, 15, 32, 13);
+//        LocalDateTime end = LocalDateTime.of(2020, 01, 01, 15, 32, 17);
+//        Duration duration = Duration.between(start, end);
+//        System.out.println(duration.toMillis());
+
     }
 
     public static void testFindBean() {
@@ -258,5 +269,18 @@ public class App {
 
     public static void testHttpServer() {
         HttpServerTest.test();
+    }
+
+    public static void testLock() {
+        LockTest lockTest = new LockTest();
+        lockTest.test();
+    }
+
+    public static void testAtomicArray() {
+        int[] value = new int[]{1, 2, 3};
+        AtomicIntegerArray ai = new AtomicIntegerArray(value);
+        ai.getAndSet(0, 3);
+        System.out.println("ai.get(0): " + ai.get(0));
+        System.out.println("value[0]: " + value[0]);
     }
 }

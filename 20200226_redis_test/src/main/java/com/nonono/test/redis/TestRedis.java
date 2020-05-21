@@ -3,13 +3,14 @@ package com.nonono.test.redis;
 import com.alibaba.fastjson.JSON;
 import com.nonono.test.redis.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.data.redis.core.ValueOperations;
+import org.springframework.data.redis.core.*;
+import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -116,5 +117,40 @@ public class TestRedis {
             }
             System.out.println("set pop:" + result.toString());
         }
+    }
+
+    public void testKeys() {
+        String keyPrefix = "NONONO:TEST:TEXT:";
+        stringRedisTemplate.opsForValue().set(keyPrefix + "A1", "1", 30, TimeUnit.SECONDS);
+        stringRedisTemplate.opsForValue().set(keyPrefix + "A2", "12", 30, TimeUnit.SECONDS);
+        stringRedisTemplate.opsForValue().set(keyPrefix + "A3", "123", 30, TimeUnit.SECONDS);
+
+        Set keys = redisTemplate.keys(keyPrefix + "*");
+        System.out.println("keys:" + keys);
+    }
+
+    public void testScanKeys() {
+        System.out.println("testScanKeys start.");
+
+        String keyPrefix = "NONONO:TEST:SCANKEYS:";
+        stringRedisTemplate.opsForValue().set(keyPrefix + "A1", "1", 30, TimeUnit.SECONDS);
+        stringRedisTemplate.opsForValue().set(keyPrefix + "A2", "12", 30, TimeUnit.SECONDS);
+        stringRedisTemplate.opsForValue().set(keyPrefix + "A3", "123", 30, TimeUnit.SECONDS);
+
+        try {
+            ScanOptions scanOptions = ScanOptions.scanOptions().match(keyPrefix + "*").count(1000).build();
+            RedisSerializer<String> keySerializer = (RedisSerializer<String>) stringRedisTemplate.getKeySerializer();
+            Cursor<String> cursor = (Cursor) stringRedisTemplate.executeWithStickyConnection((RedisCallback) redisConnection -> new ConvertingCursor<>(redisConnection.scan(scanOptions), keySerializer::deserialize));
+            while (cursor.hasNext()) {
+                Object key = cursor.next();
+                System.out.println("testScan Key: " + key);
+            }
+
+            cursor.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("testScanKeys end.");
     }
 }

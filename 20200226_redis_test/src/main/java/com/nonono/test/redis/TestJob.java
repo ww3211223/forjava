@@ -17,11 +17,14 @@ public class TestJob implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 //        testRedis.testStr();
-        testRedis.testObj();
+//        testRedis.testObj();
 //        testRedis.testIncr();
 //        testRedis.testRedisLock();
 //        testRedis.testList();
 //        testRedis.testSet();
+//        testRedis.testKeys();
+        testRedis.testScanKeys();
+
 //        redissonLockTest.testReentrantLock(5);
 //        redissonLockTest.testReentrantLock(5);
     }

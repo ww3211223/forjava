@@ -23,7 +23,8 @@ public class TestJob implements ApplicationRunner {
 //        testRedis.testList();
 //        testRedis.testSet();
 //        testRedis.testKeys();
-        testRedis.testScanKeys();
+        //testRedis.testScanKeys();
+        testRedis.testDelayQueue();
 
 //        redissonLockTest.testReentrantLock(5);
 //        redissonLockTest.testReentrantLock(5);

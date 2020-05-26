@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -152,5 +153,31 @@ public class TestRedis {
         }
 
         System.out.println("testScanKeys end.");
+    }
+
+    public void testDelayQueue() {
+        String key = "NONONO:TEST:DELAY_QUEUE:A1";
+        System.out.println(LocalTime.now() + " testDelayQueue start.");
+        stringRedisTemplate.opsForZSet().add(key, "V2", System.currentTimeMillis() + 3000);
+        stringRedisTemplate.opsForZSet().add(key, "V3", System.currentTimeMillis() + 5000);
+        stringRedisTemplate.opsForZSet().add(key, "V1", System.currentTimeMillis() + 2000);
+
+        while (true) {
+            Set<String> rangeResult = stringRedisTemplate.opsForZSet().rangeByScore(key, 0, System.currentTimeMillis(), 0, 1);
+            if (rangeResult.isEmpty()) {
+                try {
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                continue;
+            }
+
+            System.out.println(LocalTime.now() + " rangeResult:" + rangeResult.toString());
+            String value = rangeResult.iterator().next();
+            if (stringRedisTemplate.opsForZSet().remove(key, value) > 0) {
+                System.out.println(LocalTime.now() + " remove:" + value);
+            }
+        }
     }
 }

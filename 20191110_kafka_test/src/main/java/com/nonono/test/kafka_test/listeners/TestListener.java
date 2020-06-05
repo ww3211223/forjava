@@ -1,13 +1,11 @@
 package com.nonono.test.kafka_test.listeners;
 
 import com.alibaba.otter.canal.protocol.CanalEntry;
-import com.alibaba.otter.canal.protocol.Message;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Objects;
 
 /**
  * 测试消费者
@@ -16,20 +14,20 @@ import java.util.Objects;
 @Slf4j
 public class TestListener {
 
-//    @KafkaListener(topics = {"mkt_leads_solution"}, groupId = "hj_mkt_test_groupId1")
-//    public void listen(String msgData) {
-//        log.info("收到消息：" + msgData);
-//    }
-
-    @KafkaListener(topics = {"mkt_leads_solution"}, groupId = "mktEnergizeGroup")
-    public void listen(Message message) {
-        if (Objects.isNull(message)) {
-            return;
-        }
-
-        System.out.println("收到消息。");
-        printEntry(message.getEntries());
+    @KafkaListener(topics = {"wx_mkt_leads_ext_3", "wx_mkt_tasks", "wx_mkt_leads_solution", "wx_mkt_invite_test_lesson"}, groupId = "mktEnergizeGroup")
+    public void listen(String msgData) {
+        log.info("收到消息：" + msgData);
     }
+
+//    @KafkaListener(topics = {"wx_mkt_leads_ext_3"}, groupId = "mktEnergizeGroup")
+//    public void listen(Message message) {
+//        if (Objects.isNull(message)) {
+//            return;
+//        }
+//
+//        System.out.println("收到消息。");
+//        printEntry(message.getEntries());
+//    }
 
     private static void printEntry(List<CanalEntry.Entry> entrys) {
         for (CanalEntry.Entry entry : entrys) {

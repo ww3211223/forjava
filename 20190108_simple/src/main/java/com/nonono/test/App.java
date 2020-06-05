@@ -15,6 +15,7 @@ import com.nonono.test.concurrentTest.HttpServerTest;
 import com.nonono.test.concurrentTest.ThreadPoolTest;
 import com.nonono.test.conditional.ConditionConfig;
 import com.nonono.test.conditional.ListService;
+import com.nonono.test.datetimeTest.DateTimeRangeTest;
 import com.nonono.test.delayQueue.TestDelayQueue;
 import com.nonono.test.el.ElConfig;
 import com.nonono.test.event.DemoPublisher;
@@ -37,8 +38,6 @@ import com.nonono.test.threadTest.WaitNotify;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.lang.reflect.Type;
-import java.time.Duration;
-import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.Random;
 import java.util.TreeMap;
@@ -52,7 +51,7 @@ public class App {
         //testAop();
         //testGenericType();
         //testTreeMap();
-        testDelayQueue();
+        //testDelayQueue();
         //testGuavaCache();
         //testWaitNotify();
         //testGuavaCollection();
@@ -66,6 +65,7 @@ public class App {
         //testHttpServer();
         //testLock();
         //testAtomicArray();
+        dateTimeRangeTest();
 //        LocalDateTime start = LocalDateTime.of(2020, 01, 01, 15, 32, 13);
 //        LocalDateTime end = LocalDateTime.of(2020, 01, 01, 15, 32, 17);
 //        Duration duration = Duration.between(start, end);
@@ -282,5 +282,10 @@ public class App {
         ai.getAndSet(0, 3);
         System.out.println("ai.get(0): " + ai.get(0));
         System.out.println("value[0]: " + value[0]);
+    }
+
+    public static void dateTimeRangeTest() {
+        DateTimeRangeTest rangeTest = new DateTimeRangeTest();
+        rangeTest.test();
     }
 }

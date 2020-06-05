@@ -2,6 +2,7 @@ package com.nonono.test.guavaTest;
 
 import com.google.common.collect.*;
 
+import java.time.LocalDateTime;
 import java.util.Set;
 
 /**
@@ -15,6 +16,7 @@ public class GuavaCollectionTest {
         testTable();
         testRangeSet();
         testSets();
+        testRangeSet2();
     }
 
     /**
@@ -89,6 +91,14 @@ public class GuavaCollectionTest {
         System.out.println("rangeSet.encloses1: " + rangeSet.encloses(Range.openClosed(3, 10)));
         System.out.println("rangeSet.encloses2: " + rangeSet.encloses(Range.openClosed(5, 12)));
         System.out.println("rangeSet.span(): " + rangeSet.span());
+    }
+
+    private void testRangeSet2() {
+        System.out.println("----testRangeSet2()----");
+        RangeSet<LocalDateTime> rangeSet = TreeRangeSet.create();
+        rangeSet.add(Range.closed(LocalDateTime.of(2020, 06, 03, 13, 50, 20), LocalDateTime.now()));
+        System.out.println("rangeSet.contains1:" + rangeSet.contains(LocalDateTime.of(2020, 06, 05, 13, 47, 20)));
+        System.out.println("rangeSet.contains2:" + rangeSet.contains(LocalDateTime.of(2020, 06, 03, 18, 47, 20)));
     }
 
     /**

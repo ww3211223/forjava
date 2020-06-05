@@ -88,9 +88,9 @@ public class KafkaConfiguration {
         //Session超时设置
         props.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG, propertiesConfig.getSessionTimeOut());
         //键的反序列化方式
-        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, IntegerDeserializer.class);
+        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         //值的反序列化方式
-        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, MessageDeserializer.class);
+        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
 
         return props;
     }

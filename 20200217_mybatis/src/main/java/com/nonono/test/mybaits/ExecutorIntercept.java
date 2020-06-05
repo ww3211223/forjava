@@ -10,15 +10,14 @@ import org.apache.ibatis.plugin.Invocation;
 import org.apache.ibatis.plugin.Signature;
 import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
-import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
+/**
+ * SQL执行拦截器
+ */
 @Intercepts({@Signature(type = Executor.class, method = "query", args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class})})
-public class ExecutorIntercept implements Interceptor, BeanFactoryPostProcessor {
+public class ExecutorIntercept implements Interceptor {
 
     @Override
     public Object intercept(Invocation invocation) throws Throwable {
@@ -38,15 +37,14 @@ public class ExecutorIntercept implements Interceptor, BeanFactoryPostProcessor 
             paramStr.append(" ");
         }
 
-        String sqlStr = String.valueOf(boundSql.getSql().replaceAll("\\s+", " ").replace("\n", ""));
+        String sqlStr = boundSql.getSql().replaceAll("\\s+", " ").replace("\n", "");
+        System.out.println("");
+        System.out.println("--------intercept start--------");
         System.out.println("sqlId:" + sqlId);
         System.out.println("sqlStr:" + sqlStr);
         System.out.println("sqlParam:" + paramStr.toString());
+        System.out.println("--------intercept end--------");
+        System.out.println("");
         return obj;
-    }
-
-    @Override
-    public void postProcessBeanFactory(ConfigurableListableBeanFactory configurableListableBeanFactory) throws BeansException {
-
     }
 }

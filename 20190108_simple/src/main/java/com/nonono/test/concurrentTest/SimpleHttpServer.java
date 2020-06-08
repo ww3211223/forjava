@@ -82,6 +82,8 @@ public class SimpleHttpServer {
                     out.println("Content-Type: image/jpeg");
                     out.println("Content-Length: " + array.length);
                     out.println("");
+                    out.flush();
+
                     socket.getOutputStream().write(array, 0, array.length);
                 } else {
                     fileReader = new BufferedReader(new InputStreamReader(new FileInputStream(filePath)));
@@ -93,8 +95,9 @@ public class SimpleHttpServer {
                     while ((line = fileReader.readLine()) != null) {
                         out.println(line);
                     }
+
+                    out.flush();
                 }
-                out.flush();
             } catch (Exception e) {
                 out.println("HTTP/1.1 500");
                 out.println("");

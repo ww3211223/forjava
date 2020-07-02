@@ -54,7 +54,7 @@ public class App {
         //testDelayQueue();
         //testGuavaCache();
         //testWaitNotify();
-        //testGuavaCollection();
+        testGuavaCollection();
         //testGuavaPredicateAndFilter();
         //testGuavaUtil();
         //testEventBus();
@@ -65,7 +65,7 @@ public class App {
         //testHttpServer();
         //testLock();
         //testAtomicArray();
-        dateTimeRangeTest();
+        //dateTimeRangeTest();
 //        LocalDateTime start = LocalDateTime.of(2020, 01, 01, 15, 32, 13);
 //        LocalDateTime end = LocalDateTime.of(2020, 01, 01, 15, 32, 17);
 //        Duration duration = Duration.between(start, end);

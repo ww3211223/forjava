@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Random;
 import java.util.logging.Logger;
 
 @RestController
@@ -18,10 +19,22 @@ public class TestController {
     @Autowired
     private DiscoveryClient client;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "", method = RequestMethod.GET)
     public String index() {
         ServiceInstance instance = client.getLocalServiceInstance();
         logger.info("test host:" + instance.getHost() + ", service_id:" + instance.getServiceId());
         return "test";
+    }
+
+    @RequestMapping(value = "/fallback", method = RequestMethod.GET)
+    public String fallback() {
+        int sleepTime = new Random().nextInt(3000);
+        try {
+            Thread.sleep(sleepTime);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        return "server-fallback";
     }
 }

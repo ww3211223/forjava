@@ -49,6 +49,15 @@ public class GuavaCollectionTest {
         System.out.println("multiset.count(30): " + multiset.count(30));
         System.out.println("multiset.size(): " + multiset.size());
 
+        for (Multiset.Entry<Integer> item : multiset.entrySet()) {
+            System.out.println("multiset.entrySet.item[key]:" + item.getElement());
+        }
+
+        for (Integer item : multiset.elementSet()) {
+            System.out.println("multiset.elementSet.item:" + item);
+        }
+
+
         ImmutableSet<String> digits = ImmutableSet.of("aa", "bb", "ccc", "dddd", "ffff");
         Multimap<Integer, String> multimap2 = Multimaps.index(digits, String::length);
 

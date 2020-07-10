@@ -34,6 +34,7 @@ import com.nonono.test.scope.ScopeConfig;
 import com.nonono.test.taskexecutor.AsyncTaskService;
 import com.nonono.test.taskexecutor.TaskExecutorConfig;
 import com.nonono.test.taskscheduler.TaskSchedulerConfig;
+import com.nonono.test.threadTest.FutureTest;
 import com.nonono.test.threadTest.WaitNotify;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -41,6 +42,7 @@ import java.lang.reflect.Type;
 import java.util.Map;
 import java.util.Random;
 import java.util.TreeMap;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicIntegerArray;
 
 /**
@@ -54,7 +56,7 @@ public class App {
         //testDelayQueue();
         //testGuavaCache();
         //testWaitNotify();
-        testGuavaCollection();
+        //testGuavaCollection();
         //testGuavaPredicateAndFilter();
         //testGuavaUtil();
         //testEventBus();
@@ -70,6 +72,7 @@ public class App {
 //        LocalDateTime end = LocalDateTime.of(2020, 01, 01, 15, 32, 17);
 //        Duration duration = Duration.between(start, end);
 //        System.out.println(duration.toMillis());
+        futureTest();
 
     }
 
@@ -287,5 +290,16 @@ public class App {
     public static void dateTimeRangeTest() {
         DateTimeRangeTest rangeTest = new DateTimeRangeTest();
         rangeTest.test();
+    }
+
+    public static void futureTest() {
+        FutureTest futureTest = new FutureTest();
+        try {
+            futureTest.testFuture();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

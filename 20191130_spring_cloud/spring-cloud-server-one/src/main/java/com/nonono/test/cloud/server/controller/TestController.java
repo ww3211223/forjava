@@ -1,12 +1,13 @@
 package com.nonono.test.cloud.server.controller;
 
+import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.util.CollectionUtils;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Random;
 import java.util.logging.Logger;
 
@@ -16,6 +17,8 @@ public class TestController {
 
     private final Logger logger = Logger.getLogger(TestController.class.getName());
 
+    private static List<String> RESULT = Lists.newArrayList("加达里", "米玛塔尔", "盖伦特", "艾玛");
+
     @Autowired
     private DiscoveryClient client;
 
@@ -23,7 +26,35 @@ public class TestController {
     public String index() {
         ServiceInstance instance = client.getLocalServiceInstance();
         logger.info("test host:" + instance.getHost() + ", service_id:" + instance.getServiceId());
-        return "test";
+        Random random = new Random(RESULT.size() - 1);
+        return RESULT.get(random.nextInt());
+    }
+
+    @RequestMapping(value = "{id}", method = RequestMethod.GET)
+    public String index(@PathVariable("id") Integer id) {
+        if (id == null || id <= 0 || id >= RESULT.size()) {
+            return null;
+        }
+
+        return RESULT.get(id - 1);
+    }
+
+    @RequestMapping(value = "list", method = RequestMethod.POST)
+    public List<String> list(@RequestBody List<Integer> ids) {
+        List<String> result = Lists.newArrayList();
+        if (CollectionUtils.isEmpty(ids)) {
+            return result;
+        }
+
+        for (Integer id : ids) {
+            if (id == null || id <= 0 || id >= RESULT.size()) {
+                continue;
+            }
+
+            result.add(RESULT.get(id - 1));
+        }
+
+        return result;
     }
 
     @RequestMapping(value = "/fallback", method = RequestMethod.GET)

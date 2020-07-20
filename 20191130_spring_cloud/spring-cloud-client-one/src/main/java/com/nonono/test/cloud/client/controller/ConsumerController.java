@@ -1,5 +1,6 @@
 package com.nonono.test.cloud.client.controller;
 
+import com.netflix.hystrix.strategy.concurrency.HystrixRequestContext;
 import com.nonono.test.cloud.client.services.ConsumerService;
 import com.nonono.test.cloud.client.services.TestCollapseCommand;
 import com.nonono.test.cloud.client.services.TestObservableCommand;
@@ -12,6 +13,8 @@ import org.springframework.web.client.RestTemplate;
 import rx.Observable;
 import rx.Observer;
 
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
 @RestController
@@ -62,8 +65,25 @@ public class ConsumerController {
 
     @RequestMapping(value = "/collapse/{id}", method = RequestMethod.GET)
     public String collapses(@PathVariable("id") Integer id) {
-        //return consumerService.findById(id);
+//        HystrixRequestContext context = HystrixRequestContext.initializeContext();
+//        Future<String> byId = consumerService.findById(id);
+//        String result = "";
+//        try {
+//            result = byId.get();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        } catch (ExecutionException e) {
+//            e.printStackTrace();
+//        } finally {
+//            context.close();
+//        }
+//
+//        return result;
+
+        HystrixRequestContext context = HystrixRequestContext.initializeContext();
         TestCollapseCommand testCollapseCommand = new TestCollapseCommand(restTemplate, id);
-        return testCollapseCommand.execute();
+        String result = testCollapseCommand.execute();
+        context.close();
+        return result;
     }
 }

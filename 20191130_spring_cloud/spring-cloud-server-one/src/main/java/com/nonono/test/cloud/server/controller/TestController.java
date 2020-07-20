@@ -26,8 +26,8 @@ public class TestController {
     public String index() {
         ServiceInstance instance = client.getLocalServiceInstance();
         logger.info("test host:" + instance.getHost() + ", service_id:" + instance.getServiceId());
-        Random random = new Random(RESULT.size() - 1);
-        return RESULT.get(random.nextInt());
+        Random random = new Random();
+        return RESULT.get(random.nextInt(RESULT.size()));
     }
 
     @RequestMapping(value = "{id}", method = RequestMethod.GET)

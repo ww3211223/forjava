@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.concurrent.Future;
 
 @Service
 public class ConsumerService {
@@ -21,8 +22,9 @@ public class ConsumerService {
     }
 
     @HystrixCollapser(batchMethod = "findByIds", collapserProperties = {@HystrixProperty(name = "timerDelayInMilliseconds", value = "1000")})
-    public String findById(Integer id) {
-        return restTemplate.getForEntity(String.format("http://nonono-cloud-service/test/%s", id), String.class).getBody();
+    public Future<String> findById(Integer id) {
+        //return restTemplate.getForEntity(String.format("http://nonono-cloud-service/test/%s", id), String.class).getBody();
+        return null;
     }
 
     @HystrixCommand

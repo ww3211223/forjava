@@ -22,9 +22,8 @@ public class ConsumerService {
     }
 
     @HystrixCollapser(batchMethod = "findByIds", collapserProperties = {@HystrixProperty(name = "timerDelayInMilliseconds", value = "1000")})
-    public Future<String> findById(Integer id) {
-        //return restTemplate.getForEntity(String.format("http://nonono-cloud-service/test/%s", id), String.class).getBody();
-        return null;
+    public String findById(Integer id) {
+        return restTemplate.getForEntity(String.format("http://nonono-cloud-service/test/%s", id), String.class).getBody();
     }
 
     @HystrixCommand

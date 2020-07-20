@@ -65,25 +65,15 @@ public class ConsumerController {
 
     @RequestMapping(value = "/collapse/{id}", method = RequestMethod.GET)
     public String collapses(@PathVariable("id") Integer id) {
-//        HystrixRequestContext context = HystrixRequestContext.initializeContext();
-//        Future<String> byId = consumerService.findById(id);
-//        String result = "";
-//        try {
-//            result = byId.get();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        } catch (ExecutionException e) {
-//            e.printStackTrace();
-//        } finally {
-//            context.close();
-//        }
-//
-//        return result;
-
         HystrixRequestContext context = HystrixRequestContext.initializeContext();
-        TestCollapseCommand testCollapseCommand = new TestCollapseCommand(restTemplate, id);
-        String result = testCollapseCommand.execute();
+        String result = consumerService.findById(id);
         context.close();
         return result;
+
+//        HystrixRequestContext context = HystrixRequestContext.initializeContext();
+//        TestCollapseCommand testCollapseCommand = new TestCollapseCommand(restTemplate, id);
+//        String result = testCollapseCommand.execute();
+//        context.close();
+//        return result;
     }
 }

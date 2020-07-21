@@ -1,5 +1,6 @@
 package com.nonono.test.cloud.client.controller;
 
+import com.google.common.base.Joiner;
 import com.netflix.hystrix.strategy.concurrency.HystrixRequestContext;
 import com.nonono.test.cloud.client.services.ConsumerService;
 import com.nonono.test.cloud.client.services.TestCollapseCommand;
@@ -64,16 +65,23 @@ public class ConsumerController {
     }
 
     @RequestMapping(value = "/collapse/{id}", method = RequestMethod.GET)
-    public String collapses(@PathVariable("id") Integer id) {
+    public String collapses(@PathVariable("id") Integer id) throws ExecutionException, InterruptedException {
         HystrixRequestContext context = HystrixRequestContext.initializeContext();
-        String result = consumerService.findById(id);
+        Future<String> future1 = consumerService.findById(id);
+
+        String result = future1.get();
         context.close();
         return result;
+    }
 
-//        HystrixRequestContext context = HystrixRequestContext.initializeContext();
-//        TestCollapseCommand testCollapseCommand = new TestCollapseCommand(restTemplate, id);
-//        String result = testCollapseCommand.execute();
-//        context.close();
-//        return result;
+    @RequestMapping(value = "/collapse2/{id}", method = RequestMethod.GET)
+    public String collapses2(@PathVariable("id") Integer id) throws ExecutionException, InterruptedException {
+        HystrixRequestContext context = HystrixRequestContext.initializeContext();
+        TestCollapseCommand testCollapseCommand = new TestCollapseCommand(restTemplate, id);
+        Future<String> future1 = testCollapseCommand.queue();
+
+        String result = future1.get();
+        context.close();
+        return result;
     }
 }

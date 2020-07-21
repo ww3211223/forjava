@@ -22,6 +22,7 @@ public class TestBatchCommand extends HystrixCommand<List<String>> {
 
     @Override
     protected List<String> run() throws Exception {
+        System.out.println("TestBatchCommand run ids#" + ids);
         String body = restTemplate.postForEntity("http://nonono-cloud-service/test/list", ids, String.class).getBody();
         return JSON.parseArray(body, String.class);
     }

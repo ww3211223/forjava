@@ -21,13 +21,15 @@ public class ConsumerService {
         return restTemplate.getForEntity("http://nonono-cloud-service/test/", String.class).getBody();
     }
 
-    @HystrixCollapser(batchMethod = "findByIds", collapserProperties = {@HystrixProperty(name = "timerDelayInMilliseconds", value = "1000")})
-    public String findById(Integer id) {
-        return restTemplate.getForEntity(String.format("http://nonono-cloud-service/test/%s", id), String.class).getBody();
+    @HystrixCollapser(batchMethod = "findByIds", scope = com.netflix.hystrix.HystrixCollapser.Scope.GLOBAL, collapserProperties = {@HystrixProperty(name = "timerDelayInMilliseconds", value = "500")})
+    public Future<String> findById(Integer id) {
+        //return restTemplate.getForEntity(String.format("http://nonono-cloud-service/test/%s", id), String.class).getBody();
+        return null;
     }
 
-    @HystrixCommand
+    @HystrixCommand(commandProperties = {@HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "3000")})
     public List<String> findByIds(List<Integer> ids) {
+        System.out.println("findByIds ids#" + ids);
         String body = restTemplate.postForEntity("http://nonono-cloud-service/test/list", ids, String.class).getBody();
         return JSON.parseArray(body, String.class);
     }

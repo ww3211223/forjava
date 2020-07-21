@@ -32,8 +32,9 @@ public class TestController {
     }
 
     @RequestMapping(value = "{id}", method = RequestMethod.GET)
-    public String index(@PathVariable("id") Integer id) {
-        if (id == null || id <= 0 || id >= RESULT.size()) {
+    public String single(@PathVariable("id") Integer id) {
+        logger.info(String.format("single id#%s", id));
+        if (id == null || id <= 0 || id > RESULT.size()) {
             return null;
         }
 
@@ -42,13 +43,14 @@ public class TestController {
 
     @RequestMapping(value = "list", method = RequestMethod.POST)
     public List<String> list(@RequestBody List<Integer> ids) {
+        logger.info(String.format("list ids#%s", ids));
         List<String> result = Lists.newArrayList();
         if (CollectionUtils.isEmpty(ids)) {
             return result;
         }
 
         for (Integer id : ids) {
-            if (id == null || id <= 0 || id >= RESULT.size()) {
+            if (id == null || id <= 0 || id > RESULT.size()) {
                 continue;
             }
 

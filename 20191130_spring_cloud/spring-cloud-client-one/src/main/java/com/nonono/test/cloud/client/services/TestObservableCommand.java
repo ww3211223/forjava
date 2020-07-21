@@ -1,6 +1,7 @@
 package com.nonono.test.cloud.client.services;
 
 import com.netflix.hystrix.HystrixCommandGroupKey;
+import com.netflix.hystrix.HystrixCommandProperties;
 import com.netflix.hystrix.HystrixObservableCommand;
 import org.springframework.web.client.RestTemplate;
 import rx.Observable;
@@ -13,7 +14,9 @@ public class TestObservableCommand extends HystrixObservableCommand<String> {
     private RestTemplate restTemplate;
 
     public TestObservableCommand(RestTemplate restTemplate) {
-        super(HystrixCommandGroupKey.Factory.asKey("testCommand"));
+        //super(HystrixCommandGroupKey.Factory.asKey("testCommand"));
+        super(Setter.withGroupKey(HystrixCommandGroupKey.Factory.asKey("testCommand"))
+                .andCommandPropertiesDefaults(HystrixCommandProperties.Setter().withExecutionTimeoutInMilliseconds(3000)));
         this.restTemplate = restTemplate;
     }
 

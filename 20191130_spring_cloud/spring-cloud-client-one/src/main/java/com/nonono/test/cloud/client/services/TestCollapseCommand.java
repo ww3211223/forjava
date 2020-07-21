@@ -7,6 +7,7 @@ import com.netflix.hystrix.HystrixCollapserProperties;
 import com.netflix.hystrix.HystrixCommand;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -21,7 +22,8 @@ public class TestCollapseCommand extends HystrixCollapser<List<String>, String, 
     public TestCollapseCommand(RestTemplate restTemplate, Integer id) {
         super(Setter.withCollapserKey(
                 HystrixCollapserKey.Factory.asKey("testCollapseCommand"))
-                .andCollapserPropertiesDefaults(HystrixCollapserProperties.Setter().withTimerDelayInMilliseconds(1000)));
+                .andScope(Scope.GLOBAL)
+                .andCollapserPropertiesDefaults(HystrixCollapserProperties.Setter().withTimerDelayInMilliseconds(500)));
         this.restTemplate = restTemplate;
         this.id = id;
     }
@@ -33,7 +35,7 @@ public class TestCollapseCommand extends HystrixCollapser<List<String>, String, 
 
     @Override
     protected HystrixCommand<List<String>> createCommand(Collection<CollapsedRequest<String, Integer>> collapsedRequests) {
-        List<Integer> ids = Lists.newArrayListWithCapacity(collapsedRequests.size());
+        List<Integer> ids = new ArrayList<>(collapsedRequests.size());
         ids.addAll(collapsedRequests.stream().map(CollapsedRequest::getArgument).collect(Collectors.toList()));
         return new TestBatchCommand(restTemplate, ids);
     }

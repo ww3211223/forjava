@@ -17,6 +17,8 @@ public class ConsumerService {
     @Autowired
     RestTemplate restTemplate;
 
+    private int count = 0;
+
     public String consumer() {
         return restTemplate.getForEntity("http://nonono-cloud-service/test/", String.class).getBody();
     }
@@ -36,6 +38,15 @@ public class ConsumerService {
 
     @HystrixCommand(fallbackMethod = "fallback")
     public String hasFallbackTest() {
+
+        count++;
+        System.out.println("count: " + count);
+        if (count % 3 != 0) {
+            System.out.println("测试抛出异常。");
+            throw new RuntimeException("test Exception.");
+        }
+
+        System.out.println("调用service.");
         return restTemplate.getForEntity("http://nonono-cloud-service/test/fallback", String.class).getBody();
     }
 

@@ -69,6 +69,6 @@ public class TestController {
             e.printStackTrace();
         }
 
-        return "server-fallback";
+        return "server-result";
     }
 }

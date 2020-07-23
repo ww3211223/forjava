@@ -36,6 +36,7 @@ import com.nonono.test.taskexecutor.TaskExecutorConfig;
 import com.nonono.test.taskscheduler.TaskSchedulerConfig;
 import com.nonono.test.threadTest.FutureTest;
 import com.nonono.test.threadTest.WaitNotify;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.lang.reflect.Type;
@@ -72,8 +73,9 @@ public class App {
 //        LocalDateTime end = LocalDateTime.of(2020, 01, 01, 15, 32, 17);
 //        Duration duration = Duration.between(start, end);
 //        System.out.println(duration.toMillis());
-        futureTest();
-
+        //futureTest();
+        System.out.println(StringUtils.isBlank(null));
+        System.out.println(StringUtils.isEmpty(null));
     }
 
     public static void testFindBean() {

@@ -1,6 +1,5 @@
 package com.nonono.test.cloud.client.controller;
 
-import com.google.common.base.Joiner;
 import com.netflix.hystrix.strategy.concurrency.HystrixRequestContext;
 import com.nonono.test.cloud.client.services.ConsumerService;
 import com.nonono.test.cloud.client.services.TestCollapseCommand;

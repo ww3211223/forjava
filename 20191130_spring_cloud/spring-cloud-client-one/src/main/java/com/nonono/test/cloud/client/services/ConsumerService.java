@@ -1,9 +1,11 @@
 package com.nonono.test.cloud.client.services;
 
 import com.alibaba.fastjson.JSON;
+import com.google.common.collect.Lists;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCollapser;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+import com.nonono.test.cloud.client.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -53,5 +55,4 @@ public class ConsumerService {
     public String fallback() {
         return "local-fallback";
     }
-
 }

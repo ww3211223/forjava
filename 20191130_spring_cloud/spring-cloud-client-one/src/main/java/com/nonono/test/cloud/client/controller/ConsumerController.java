@@ -2,6 +2,7 @@ package com.nonono.test.cloud.client.controller;
 
 import com.netflix.hystrix.strategy.concurrency.HystrixRequestContext;
 import com.nonono.test.cloud.client.services.ConsumerService;
+import com.nonono.test.cloud.client.services.FeignService;
 import com.nonono.test.cloud.client.services.TestCollapseCommand;
 import com.nonono.test.cloud.client.services.TestObservableCommand;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
 import rx.Observable;
 import rx.Observer;
 
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 import java.util.logging.Logger;

@@ -38,6 +38,7 @@ import com.nonono.test.threadTest.FutureTest;
 import com.nonono.test.threadTest.WaitNotify;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.util.Base64Utils;
 
 import java.lang.reflect.Type;
 import java.util.Map;
@@ -74,8 +75,7 @@ public class App {
 //        Duration duration = Duration.between(start, end);
 //        System.out.println(duration.toMillis());
         //futureTest();
-        System.out.println(StringUtils.isBlank(null));
-        System.out.println(StringUtils.isEmpty(null));
+
     }
 
     public static void testFindBean() {

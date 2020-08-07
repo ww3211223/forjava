@@ -5,7 +5,7 @@ import com.nonono.test.spring.cloud.client.api.FeignServiceClient;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient("nonono-cloud-service")
+@FeignClient(value = "nonono-cloud-service", fallback = FeignFallbackService.class)
 public interface FeignService extends FeignServiceClient {
 
     @RequestMapping(value = "/feign/test1", method = RequestMethod.GET)

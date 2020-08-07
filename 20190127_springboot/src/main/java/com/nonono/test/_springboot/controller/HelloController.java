@@ -1,20 +1,19 @@
 package com.nonono.test._springboot.controller;
 
 import com.nonono.test._springboot.model.AuthorSettings;
-import com.nonono.test._springboot.model.JsonDataTime;
 import com.nonono.test._springboot.model.Person;
 import com.nonono.test.starter_hello.HelloService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.*;
-
-import java.time.LocalDateTime;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("hello")
 @Slf4j
-public class HelloController {
+public class HelloController extends BaseController {
 
     @Autowired
     private AuthorSettings authorSettings;
@@ -36,5 +35,10 @@ public class HelloController {
     @RequestMapping(value = "/search", produces = {MediaType.APPLICATION_JSON_VALUE})
     public Person search(@RequestParam("personName") String personName) {
         return new Person(personName, 32, "shanghai");
+    }
+
+    @RequestMapping("/user")
+    public Integer userId() {
+        return getUserId();
     }
 }

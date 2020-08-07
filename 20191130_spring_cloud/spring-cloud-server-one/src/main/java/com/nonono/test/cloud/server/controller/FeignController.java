@@ -12,7 +12,7 @@ public class FeignController implements FeignServiceClient {
 
     @RequestMapping(value = "/test1", method = RequestMethod.GET)
     public String test1(@RequestParam String name) {
-        return "test1 name: " + name;
+        throw new RuntimeException("test1");
     }
 
     @RequestMapping(value = "/test2", method = RequestMethod.GET)

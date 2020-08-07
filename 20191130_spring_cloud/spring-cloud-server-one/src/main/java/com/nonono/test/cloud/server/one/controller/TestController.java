@@ -1,4 +1,4 @@
-package com.nonono.test.cloud.server.controller;
+package com.nonono.test.cloud.server.one.controller;
 
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Random;
-import java.util.UUID;
 import java.util.logging.Logger;
 
 @RestController

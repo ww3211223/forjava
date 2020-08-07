@@ -1,4 +1,4 @@
-package com.nonono.test.cloud.server.model;
+package com.nonono.test.cloud.server.two.model;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package com.nonono.test.cloud.server.controller;
+package com.nonono.test.cloud.server.two.controller;
 
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;

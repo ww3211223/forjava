@@ -3,37 +3,26 @@ package com.nonono.test.cloud.client.services;
 import com.nonono.test.cloud.client.model.User;
 import com.nonono.test.spring.cloud.client.api.model.Product;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Component
-public class FeignFallbackService implements FeignService {
-
+@RequestMapping("/fallback")
+public class FeignFallbackService implements FeignApiService {
     @Override
-    public String test1(String name) {
-        return "test1 fallback";
-    }
-
-    @Override
-    public String test2(String name, Integer age) {
-        return "test2 fallback";
-    }
-
-    @Override
-    public String test3(User user) {
-        return "test3 fallback";
-    }
-
-    @Override
-    public String test5(String name) {
+    public String test(@RequestParam("name") String name) {
         return "test5 fallback";
     }
 
     @Override
-    public String test6(String name, Integer age) {
+    public String test(@RequestParam("name") String name, @RequestHeader("age") Integer age) {
         return "test6 fallback";
     }
 
     @Override
-    public String test7(Product product) {
+    public String test(@RequestBody Product product) {
         return "test7 fallback";
     }
 }

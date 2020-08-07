@@ -1,6 +1,7 @@
 package com.nonono.test.cloud.client.controller;
 
 import com.nonono.test.cloud.client.model.User;
+import com.nonono.test.cloud.client.services.FeignApiService;
 import com.nonono.test.cloud.client.services.FeignService;
 import com.nonono.test.spring.cloud.client.api.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,18 +16,21 @@ public class FeignController {
     @Autowired
     private FeignService feignService;
 
+    @Autowired
+    private FeignApiService feignApiService;
 
-    @RequestMapping(value = "/feign/test1", method = RequestMethod.GET)
+
+    @RequestMapping(value = "/feign_client/test1", method = RequestMethod.GET)
     public String feignTest1(@RequestParam String name) {
         return feignService.test1(name);
     }
 
-    @RequestMapping(value = "/feign/test2", method = RequestMethod.GET)
+    @RequestMapping(value = "/feign_client/test2", method = RequestMethod.GET)
     public String feignTest2(@RequestParam String name, @RequestParam Integer age) {
         return feignService.test2(name, age);
     }
 
-    @RequestMapping(value = "/feign/test3", method = RequestMethod.GET)
+    @RequestMapping(value = "/feign_client/test3", method = RequestMethod.GET)
     public String feignTest3(@RequestParam String name, @RequestParam Integer age) {
         User user = new User();
         user.setAge(age);
@@ -37,12 +41,12 @@ public class FeignController {
 
     @RequestMapping(value = "/feign_client/test5", method = RequestMethod.GET)
     public String feignTest5(@RequestParam String name) {
-        return feignService.test5(name);
+        return feignApiService.test(name);
     }
 
     @RequestMapping(value = "/feign_client/test6", method = RequestMethod.GET)
     public String feignTest6(@RequestParam String name, @RequestParam Integer age) {
-        return feignService.test6(name, age);
+        return feignApiService.test(name, age);
     }
 
     @RequestMapping(value = "/feign_client/test7", method = RequestMethod.GET)
@@ -51,6 +55,6 @@ public class FeignController {
         product.setId(id);
         product.setProductName(productName);
         product.setAddress(address);
-        return feignService.test7(product);
+        return feignApiService.test(product);
     }
 }

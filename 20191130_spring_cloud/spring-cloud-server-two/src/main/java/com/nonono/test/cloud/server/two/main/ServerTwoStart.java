@@ -1,4 +1,4 @@
-package com.nonono.test.cloud.server.main;
+package com.nonono.test.cloud.server.two.main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

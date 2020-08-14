@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@Service
+//@Service
 public class ScheduledTaskService {
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 

@@ -75,7 +75,7 @@ public class App {
 //        Duration duration = Duration.between(start, end);
 //        System.out.println(duration.toMillis());
         //futureTest();
-
+        testTaskScheduler();
     }
 
     public static void testFindBean() {

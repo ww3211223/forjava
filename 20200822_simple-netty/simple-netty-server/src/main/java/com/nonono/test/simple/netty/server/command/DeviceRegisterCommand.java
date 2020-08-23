@@ -7,6 +7,7 @@ import com.nonono.test.simple.netty.core.message.JsonCommand;
 import com.nonono.test.simple.netty.server.model.CommandDirective;
 import com.nonono.test.simple.netty.server.model.DeviceRegisterCallbackRequest;
 import com.nonono.test.simple.netty.server.model.DeviceRegisterRequest;
+import com.nonono.test.simple.netty.server.services.ChannelHandlerFactory;
 import io.netty.channel.ChannelHandlerContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +25,7 @@ public class DeviceRegisterCommand extends BaseCommand<DeviceRegisterRequest> {
         registerCallback.setDeviceId(deviceRegisterRequest.getDeviceId());
         registerCallback.setMessage("注册完成");
 
+        ChannelHandlerFactory.register(clientNo, ctx);
         JsonCommand command = new JsonCommand();
         command.setDirective(CommandDirective.RESP_DEVICE_REGISTER);
         command.setRequestId(0L);

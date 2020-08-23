@@ -1,5 +1,6 @@
 package com.nonono.test.simple.netty.core.utils;
 
+import com.nonono.test.ame.core.json.Jack;
 import com.nonono.test.simple.netty.core.message.JsonCommand;
 import com.nonono.test.simple.netty.core.message.RawMessage;
 import com.nonono.test.simple.netty.core.message.RawMessageType;

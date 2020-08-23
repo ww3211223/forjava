@@ -1,4 +1,4 @@
-package com.nonono.test.simple.netty.server;
+package com.nonono.test.simple.netty.server.job;
 
 import com.nonono.test.simple.netty.core.server.NettySocketServer;
 import org.springframework.beans.factory.annotation.Autowired;

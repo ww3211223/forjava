@@ -208,4 +208,22 @@ public class Bye {
         return ctx.channel().id().asLongText();
     }
 
+    /**
+     * 获取字符长度
+     *
+     * @param s
+     * @return
+     */
+    public static int getWordCount(String s) {
+        int length = 0;
+        for (int i = 0; i < s.length(); i++) {
+            int ascii = Character.codePointAt(s, i);
+            if (ascii >= 0 && ascii <= 255)
+                length++;
+            else
+                length += 2;
+        }
+        return length;
+    }
+
 }

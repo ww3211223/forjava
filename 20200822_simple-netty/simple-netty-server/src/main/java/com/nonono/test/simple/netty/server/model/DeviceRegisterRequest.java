@@ -1,4 +1,4 @@
-package com.nonono.test.simple.netty.server;
+package com.nonono.test.simple.netty.server.model;
 
 
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.nonono.test.simple.netty.server;
+package com.nonono.test.simple.netty.server.model;
 
 import com.nonono.test.ame.core.enums.EnumHelper;
 import com.nonono.test.ame.core.message.CmdDirective;

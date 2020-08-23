@@ -47,11 +47,6 @@ public class NettySocketClient {
      */
     public void start() {
         CountDownLatch latch = new CountDownLatch(1);
-//        new Thread(() -> {
-//
-//        })
-//                .start();
-
         try {
             Bootstrap bootstrap = BootstrapFactory.FACT.getOrCreateBootstrap(hostAddress, serverPort);
 

@@ -25,7 +25,7 @@ public class RawMessages {
     public static RawMessage from(int messageType, int clientNo, String body) {
         RawMessage msg = new RawMessage();
 
-        int bLen = body.length();
+        int bLen = body.getBytes().length;
         int tLen = 4 + 4 + 8 + 4 + 4 + 4 + bLen;
 
         msg.setTotalLength(tLen);

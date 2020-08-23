@@ -1,4 +1,4 @@
-package com.nonono.test.simple.netty.server;
+package com.nonono.test.simple.netty.server.main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

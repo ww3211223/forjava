@@ -52,11 +52,11 @@ public abstract class BaseCommand<REQ> implements ICommand, InitializingBean {
 
     /**
      * @param ctx
-     * @param clintNo
+     * @param clientNo
      * @param req
      * @return
      */
-    protected abstract JsonCommand doExecute(ChannelHandlerContext ctx, int clintNo, REQ req);
+    protected abstract JsonCommand doExecute(ChannelHandlerContext ctx, int clientNo, REQ req);
 
     @Override
     public void afterPropertiesSet() throws Exception {

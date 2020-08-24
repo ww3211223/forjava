@@ -3,6 +3,8 @@ package com.nonono.test.simple.netty.core.socket;
 import com.nonono.test.simple.netty.core.message.RawMessage;
 import com.nonono.test.simple.netty.core.message.RawMessageType;
 import com.nonono.test.simple.netty.core.processor.RawMessageEncoder;
+import com.nonono.test.simple.netty.core.server.ChannelHandlerFactory;
+import com.nonono.test.simple.netty.core.server.NettySocketServer;
 import com.nonono.test.simple.netty.core.utils.Bye;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;
@@ -15,11 +17,8 @@ import org.slf4j.LoggerFactory;
 
 @ChannelHandler.Sharable
 public class RawMessageInboundHandler extends ChannelInboundHandlerAdapter {
-
     private static final Logger logger = LoggerFactory.getLogger(RawMessageInboundHandler.class);
-
     private static final int LENGTH_HEADER = 8;
-
     private RawMessageEncoder messageEncoder;
 
     public RawMessageInboundHandler(RawMessageEncoder messageEncoder) {
@@ -73,6 +72,7 @@ public class RawMessageInboundHandler extends ChannelInboundHandlerAdapter {
             String str = new String(data);
 
             RawMessage raw = messageEncoder.decode(data);
+            ChannelHandlerFactory.register(raw.getClientNo(), ctx);
 
             // 非 ping消息, 才打印debug日志
             if (raw.getMessageType() != RawMessageType.PING_COMMAND.getCode()) {
@@ -90,7 +90,7 @@ public class RawMessageInboundHandler extends ChannelInboundHandlerAdapter {
             Bye.release(in);
         }
 
-        logger.debug("inbound channel handle, elapsed {} ms",  System.currentTimeMillis() - s1);
+        logger.debug("inbound channel handle, elapsed {} ms", System.currentTimeMillis() - s1);
     }
 
     @Override
@@ -109,6 +109,7 @@ public class RawMessageInboundHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
         // TODO:
+        ChannelHandlerFactory.remove(ctx);
     }
 
     @Override

@@ -4,11 +4,11 @@ import com.nonono.test.ame.core.json.Jack;
 import com.nonono.test.simple.netty.core.message.JsonCommand;
 import com.nonono.test.simple.netty.core.message.RawMessage;
 import com.nonono.test.simple.netty.core.processor.RawMessageEncoder;
+import com.nonono.test.simple.netty.core.server.ChannelHandlerFactory;
 import com.nonono.test.simple.netty.core.server.NettySocketServer;
 import com.nonono.test.simple.netty.core.utils.RawMessages;
 import com.nonono.test.simple.netty.server.model.CommandDirective;
 import com.nonono.test.simple.netty.server.model.ServerCtrlDeviceRequest;
-import com.nonono.test.simple.netty.server.services.ChannelHandlerFactory;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
@@ -41,7 +41,7 @@ public class ServerController {
         command.setMessage("test request.");
 
         ChannelHandlerContext channelHandlerContext = ChannelHandlerFactory.getChannelHandlerContext(clientNo);
-        if(Objects.isNull(channelHandlerContext)) {
+        if (Objects.isNull(channelHandlerContext)) {
             return "channelHandlerContext is null.";
         }
 

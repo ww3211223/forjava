@@ -11,12 +11,17 @@ import com.nonono.test.simple.netty.server.services.ChannelHandlerFactory;
 import io.netty.channel.ChannelHandlerContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class DeviceRegisterCommand extends BaseCommand<DeviceRegisterRequest> {
 
     private static final Logger logger = LoggerFactory.getLogger(DeviceRegisterCommand.class);
+
+    @Value("${simple.netty.current.client_no}")
+    private Integer currentClientNo;
 
     @Override
     protected JsonCommand doExecute(ChannelHandlerContext ctx, int clientNo, DeviceRegisterRequest deviceRegisterRequest) {
@@ -29,7 +34,7 @@ public class DeviceRegisterCommand extends BaseCommand<DeviceRegisterRequest> {
         JsonCommand command = new JsonCommand();
         command.setDirective(CommandDirective.RESP_DEVICE_REGISTER);
         command.setRequestId(0L);
-        command.setClientNo(clientNo);
+        command.setClientNo(currentClientNo);
         command.setDirectiveVal(CommandDirective.RESP_DEVICE_REGISTER.getCode());
         command.setData(Jack.toJson(registerCallback));
         command.setStatus(0);

@@ -24,7 +24,7 @@ public class ServerCtrlDeviceCommand extends BaseCommand<ServerCtrlDeviceRequest
 
     @Override
     public CmdDirective getDirective() {
-        return CommandDirective.DEVICE_REGISTER;
+        return CommandDirective.SERVER_CTRL_DEVICE;
     }
 
 }

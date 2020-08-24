@@ -18,7 +18,7 @@ public class TestController {
     @Autowired
     private NettySocketClient nettySocketClient;
 
-    @Value("${simple.netty.client.client_no}")
+    @Value("${simple.netty.current.client_no}")
     private Integer clientNo;
 
     @GetMapping(value = "/device/register")

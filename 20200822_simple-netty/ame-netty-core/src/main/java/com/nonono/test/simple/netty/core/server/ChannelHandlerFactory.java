@@ -1,4 +1,4 @@
-package com.nonono.test.simple.netty.server.services;
+package com.nonono.test.simple.netty.core.server;
 
 
 import com.google.common.collect.Maps;

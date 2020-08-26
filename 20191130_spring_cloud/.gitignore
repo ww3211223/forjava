@@ -14,9 +14,8 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+.idea/libraries/
 *.iws
-*.iml
 *.ipr
 
 ### NetBeans ###

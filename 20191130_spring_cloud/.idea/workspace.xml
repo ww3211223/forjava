@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1bdf894e-61db-417e-862a-33f68baae991" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="J:\MySoft\IntelliJ IDEA Community Edition 2019.1.1\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1UK6whENExAGqjxFkn6LW2qzFdh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="新增" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../koala-labmng" />
+    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.24655014" />
+    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.nonono.test.cloud.registry.one" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Work2\forjava\20191130_spring_cloud" />
+      <recent name="E:\Work2\forjava\20191130_spring_cloud_registry" />
+    </key>
+  </component>
+  <component name="RunManager" selected="应用程序.RegistryOneStart">
+    <configuration name="ClientOneStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.nonono.test.cloud.client.main.ClientOneStart" />
+      <module name="spring-cloud-client-one" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nonono.test.cloud.client.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistryOneStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.nonono.test.cloud.registry.one.RegistryOneStart" />
+      <module name="spring-cloud-registry-one" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nonono.test.cloud.registry.one.RegistryOneStart" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistryTwoStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.nonono.test.cloud.registry.one.RegistryTwoStart" />
+      <module name="spring-cloud-registry-two" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nonono.test.cloud.registry.one.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerOneStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.nonono.test.cloud.server.main.ServerOneStart" />
+      <module name="spring-cloud-server-one" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nonono.test.cloud.server.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerTwoStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.nonono.test.cloud.server.main.ServerTwoStart" />
+      <module name="spring-cloud-server-two" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nonono.test.cloud.server.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="应用程序.ClientOneStart" />
+      <item itemvalue="应用程序.RegistryOneStart" />
+      <item itemvalue="应用程序.RegistryTwoStart" />
+      <item itemvalue="应用程序.ServerOneStart" />
+      <item itemvalue="应用程序.ServerTwoStart" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.RegistryOneStart" />
+        <item itemvalue="应用程序.ClientOneStart" />
+        <item itemvalue="应用程序.ServerTwoStart" />
+        <item itemvalue="应用程序.ServerOneStart" />
+        <item itemvalue="应用程序.RegistryTwoStart" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1bdf894e-61db-417e-862a-33f68baae991" name="Default Changelist" comment="" />
+      <created>1575093179381</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575093179381</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1038" y="338" key="#com.intellij.ide.util.MemberChooser" timestamp="1595237927605">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1038" y="338" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1595237927605" />
+    <state x="1583" y="459" key="#xdebugger.evaluate" timestamp="1595260265482">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1583" y="459" key="#xdebugger.evaluate/0.0.2560.1400@0.0.2560.1400" timestamp="1595260265482" />
+    <state width="476" height="582" key="DebuggerActiveHint" timestamp="1595260243847">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="476" height="582" key="DebuggerActiveHint/0.0.2560.1400@0.0.2560.1400" timestamp="1595260243847" />
+    <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog" timestamp="1592187896570">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1592187896570" />
+    <state x="1007" y="396" key="FileChooserDialogImpl" timestamp="1595286526527">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1007" y="396" key="FileChooserDialogImpl/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1591609532227" />
+    <state x="1007" y="396" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1595286526527" />
+    <state width="2507" height="414" key="GridCell.Tab.0.bottom" timestamp="1595261364933">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2507" height="464" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1595241359027" />
+    <state width="2507" height="414" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1595261364933" />
+    <state width="2507" height="414" key="GridCell.Tab.0.center" timestamp="1595261364933">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2507" height="464" key="GridCell.Tab.0.center/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1595241359027" />
+    <state width="2507" height="414" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1595261364933" />
+    <state width="2507" height="414" key="GridCell.Tab.0.left" timestamp="1595261364933">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2507" height="464" key="GridCell.Tab.0.left/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1595241359027" />
+    <state width="2507" height="414" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1595261364933" />
+    <state width="2507" height="414" key="GridCell.Tab.0.right" timestamp="1595261364933">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2507" height="464" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1595241359027" />
+    <state width="2507" height="414" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1595261364933" />
+    <state width="2507" height="414" key="GridCell.Tab.1.bottom" timestamp="1595261364934">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2507" height="464" key="GridCell.Tab.1.bottom/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1595241346502" />
+    <state width="2507" height="414" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1595261364934" />
+    <state width="2507" height="414" key="GridCell.Tab.1.center" timestamp="1595261364934">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2507" height="464" key="GridCell.Tab.1.center/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1595241346502" />
+    <state width="2507" height="414" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1595261364934" />
+    <state width="2507" height="414" key="GridCell.Tab.1.left" timestamp="1595261364933">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2507" height="464" key="GridCell.Tab.1.left/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1595241346501" />
+    <state width="2507" height="414" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1595261364933" />
+    <state width="2507" height="414" key="GridCell.Tab.1.right" timestamp="1595261364934">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2507" height="464" key="GridCell.Tab.1.right/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1595241346502" />
+    <state width="2507" height="414" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1595261364934" />
+    <state x="632" y="170" key="SettingsEditor" timestamp="1595260190245">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="632" y="170" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1595260190245" />
+    <state x="874" y="294" width="1083" height="724" key="find.popup" timestamp="1592549871396">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="874" y="294" width="1083" height="724" key="find.popup/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1592549871396" />
+    <state x="859" y="308" width="840" height="1034" key="search.everywhere.popup" timestamp="1595233735107">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="859" y="308" width="840" height="1034" key="search.everywhere.popup/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1595233735107" />
+  </component>
+</project>

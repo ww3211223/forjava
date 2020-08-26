@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/20191130_spring_cloud.iml" filepath="$PROJECT_DIR$/20191130_spring_cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-client-one/spring-cloud-client-one.iml" filepath="$PROJECT_DIR$/spring-cloud-client-one/spring-cloud-client-one.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-registry-one/spring-cloud-registry-one.iml" filepath="$PROJECT_DIR$/spring-cloud-registry-one/spring-cloud-registry-one.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-registry-two/spring-cloud-registry-two.iml" filepath="$PROJECT_DIR$/spring-cloud-registry-two/spring-cloud-registry-two.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-server-one/spring-cloud-server-one.iml" filepath="$PROJECT_DIR$/spring-cloud-server-one/spring-cloud-server-one.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-server-two/spring-cloud-server-two.iml" filepath="$PROJECT_DIR$/spring-cloud-server-two/spring-cloud-server-two.iml" />
+    </modules>
+  </component>
+</project>

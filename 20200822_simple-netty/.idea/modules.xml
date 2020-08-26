@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/20200822_simple-netty.iml" filepath="$PROJECT_DIR$/20200822_simple-netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ame-core/ame-core.iml" filepath="$PROJECT_DIR$/ame-core/ame-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ame-netty-core/ame-netty-core.iml" filepath="$PROJECT_DIR$/ame-netty-core/ame-netty-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ame-spring-core/ame-spring-core.iml" filepath="$PROJECT_DIR$/ame-spring-core/ame-spring-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simple-netty-client/simple-netty-client.iml" filepath="$PROJECT_DIR$/simple-netty-client/simple-netty-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simple-netty-server/simple-netty-server.iml" filepath="$PROJECT_DIR$/simple-netty-server/simple-netty-server.iml" />
+    </modules>
+  </component>
+</project>

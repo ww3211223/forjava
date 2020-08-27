@@ -1,5 +1,6 @@
 package com.nonono.test.simple.netty.core.processor.impl;
 
+import com.nonono.test.simple.netty.core.command.CommandProcessorFactory;
 import com.nonono.test.simple.netty.core.message.RawMessage;
 import com.nonono.test.simple.netty.core.message.RawMessageType;
 import com.nonono.test.simple.netty.core.processor.BaseRawMessageChannelProcessor;
@@ -13,7 +14,9 @@ public class PongCommandMessageProcessor extends BaseRawMessageChannelProcessor 
     @Override
     public RawMessage process(ChannelHandlerContext ctx, RawMessage msg) {
         logger.info("pong");
-        System.out.println("pong out");
+        CommandProcessorFactory.getPongCommands().forEach(item -> {
+            item.execute(ctx);
+        });
         return null;
     }
 

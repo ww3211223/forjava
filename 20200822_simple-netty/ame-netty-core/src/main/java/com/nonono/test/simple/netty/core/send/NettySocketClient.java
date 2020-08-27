@@ -1,5 +1,6 @@
 package com.nonono.test.simple.netty.core.send;
 
+import com.nonono.test.simple.netty.core.config.AmeNettyConfig;
 import com.nonono.test.simple.netty.core.message.RawMessage;
 import com.nonono.test.simple.netty.core.processor.RawMessageEncoder;
 import io.netty.bootstrap.Bootstrap;
@@ -8,6 +9,7 @@ import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFuture;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
@@ -16,6 +18,7 @@ public class NettySocketClient {
 
     private static final Logger logger = LoggerFactory.getLogger(NettySocketClient.class);
 
+    private SocketClientSupervisor clientSupervisor;
 
     /**
      *
@@ -37,10 +40,15 @@ public class NettySocketClient {
      */
     private RawMessageEncoder messageEncoder = new RawMessageEncoder();
 
+    @Autowired
+    private AmeNettyConfig nettyConfig;
+
     public NettySocketClient(String hostAddress, int serverPort) {
         this.hostAddress = hostAddress;
         this.serverPort = serverPort;
+        this.clientSupervisor = new SocketClientSupervisor(nettyConfig, this);
     }
+
 
     /**
      *
@@ -69,6 +77,7 @@ public class NettySocketClient {
             logger.error("", e);
         }
 
+        clientSupervisor.startSocket();
         logger.info("netty client start done");
     }
 

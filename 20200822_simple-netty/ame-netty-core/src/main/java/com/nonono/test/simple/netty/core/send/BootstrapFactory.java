@@ -40,8 +40,6 @@ public class BootstrapFactory {
 
         robinChannelInitializer = new RobinChannelInitializer(rawMessageOutboundHandler, rawMessageInboundHandler);
         logger.info("BootstrapFactory robinChannelInitializer#{}", robinChannelInitializer);
-
-        RawMessageFactory.register(new PongCommandMessageProcessor());
     }
 
     /**

@@ -16,10 +16,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="20200822_simple-netty" target="1.5" />
+      <module name="20200822_simple-netty" target="1.8" />
       <module name="ame-core" target="8" />
       <module name="ame-netty-core" target="1.8" />
-      <module name="ame-spring-core" target="1.5" />
+      <module name="ame-spring-core" target="1.8" />
       <module name="simple-netty-client" target="1.8" />
       <module name="simple-netty-server" target="1.8" />
     </bytecodeTargetLevel>

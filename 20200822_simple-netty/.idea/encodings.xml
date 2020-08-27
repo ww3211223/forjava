@@ -3,7 +3,6 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/ame-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ame-netty-core/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ame-spring-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/simple-netty-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/simple-netty-server/src/main/java" charset="UTF-8" />
   </component>

@@ -3,6 +3,11 @@
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
       <option name="id" value="central" />
+      <option name="name" value="Maven Repository Switchboard" />
+      <option name="url" value="http://nexus.yeshj.com/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
       <option name="name" value="central" />
       <option name="url" value="http://47.100.121.56/nexus/repository/maven-public/" />
     </remote-repository>
@@ -30,6 +35,21 @@
       <option name="id" value="jboss.community" />
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="public" />
+      <option name="name" value="Public Repositories" />
+      <option name="url" value="http://nexus.yeshj.com/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="springsource-repo-snapshot" />
+      <option name="name" value="SpringSource Repository" />
+      <option name="url" value="http://repo.spring.io/snapshot/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="springsource-repo" />
+      <option name="name" value="SpringSource Repository" />
+      <option name="url" value="http://repo.spring.io/release/" />
     </remote-repository>
   </component>
 </project>

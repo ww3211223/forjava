@@ -1,6 +1,7 @@
 package com.nonono.test.simple.netty.core.send;
 
-import com.nonono.test.simple.netty.core.command.BasePongCommand;
+import com.nonono.test.simple.netty.core.command.CommandProcessorFactory;
+import com.nonono.test.simple.netty.core.command.IPongCommand;
 import com.nonono.test.simple.netty.core.config.AmeNettyConfig;
 import com.nonono.test.simple.netty.core.message.RawMessage;
 import com.nonono.test.simple.netty.core.message.RawMessageType;
@@ -8,6 +9,7 @@ import com.nonono.test.simple.netty.core.utils.RawMessages;
 import io.netty.channel.ChannelHandlerContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.scheduling.annotation.Scheduled;
 
 import java.time.Duration;
@@ -15,13 +17,11 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 /**
- * socket客户端监视者
+ * 重连socket客户端
  */
-public class SocketClientSupervisor extends BasePongCommand {
+public class ReStartSocketClient extends NettySocketClient implements IPongCommand, InitializingBean {
 
-    private static final Logger log = LoggerFactory.getLogger(SocketClientSupervisor.class);
-
-    private NettySocketClient nettySocketClient;
+    private static final Logger log = LoggerFactory.getLogger(ReStartSocketClient.class);
 
     private AmeNettyConfig nettyConfig;
 
@@ -50,15 +50,16 @@ public class SocketClientSupervisor extends BasePongCommand {
      */
     private int restartQuantity;
 
-    public SocketClientSupervisor(AmeNettyConfig nettyConfig, NettySocketClient nettySocketClient) {
-        this.nettySocketClient = nettySocketClient;
+    public ReStartSocketClient(String hostAddress, int serverPort, AmeNettyConfig nettyConfig) {
+        super(hostAddress, serverPort);
         this.nettyConfig = nettyConfig;
     }
 
     /**
-     * 启动socket连接
+     * 启动socket后续处理
      */
-    public void startSocket() {
+    @Override
+    public void postStart() {
         preConnected = true;
         restartQuantity++;
         lastPreStartTime = LocalDateTime.now();
@@ -69,10 +70,10 @@ public class SocketClientSupervisor extends BasePongCommand {
      * 重启socket连接
      */
     private void restartSocket() {
-        nettySocketClient.start();
+        this.start();
     }
 
-    @Scheduled(cron = "#{nettyConfig.getClientPingCron()}")
+    //@Scheduled(cron = "#{nettyConfig.getClientPingCron()}")
     public void ping() {
         if (!nettyConfig.isClientRestartEnabled()) {
             return;
@@ -80,7 +81,7 @@ public class SocketClientSupervisor extends BasePongCommand {
         if (preConnected || isConnected) {
             RawMessage message = new RawMessage();
             RawMessages.from(RawMessageType.PING_COMMAND, 0, "ping");
-            nettySocketClient.send(message);
+            send(message);
         }
     }
 
@@ -110,12 +111,17 @@ public class SocketClientSupervisor extends BasePongCommand {
     }
 
     @Override
-    public void execute(ChannelHandlerContext ctx) {
+    public void executePong(ChannelHandlerContext ctx) {
         if (!isConnected) {
             isConnected = true;
             restartQuantity = 1;
             log.info("socket started.");
         }
         this.lastPongTime = LocalDateTime.now();
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        CommandProcessorFactory.registerPongCommand(this);
     }
 }

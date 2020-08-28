@@ -6,6 +6,7 @@ import com.nonono.test.simple.netty.client.model.DeviceRegisterRequest;
 import com.nonono.test.simple.netty.core.message.JsonCommand;
 import com.nonono.test.simple.netty.core.message.RawMessage;
 import com.nonono.test.simple.netty.core.send.NettySocketClient;
+import com.nonono.test.simple.netty.core.send.ReStartSocketClient;
 import com.nonono.test.simple.netty.core.utils.RawMessages;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @Autowired
-    private NettySocketClient nettySocketClient;
+    private ReStartSocketClient nettySocketClient;
 
     @Value("${simple.netty.current.client_no}")
     private Integer clientNo;

@@ -8,9 +8,9 @@ import io.netty.channel.ChannelHandlerContext;
 public interface IPongCommand {
 
     /**
-     * 处理
+     * 处理pong命令
      *
      * @param ctx
      */
-    void execute(ChannelHandlerContext ctx);
+    void executePong(ChannelHandlerContext ctx);
 }

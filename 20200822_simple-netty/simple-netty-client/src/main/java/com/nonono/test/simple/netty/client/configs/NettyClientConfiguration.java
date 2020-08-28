@@ -1,6 +1,7 @@
 package com.nonono.test.simple.netty.client.configs;
 
-import com.nonono.test.simple.netty.core.send.NettySocketClient;
+import com.nonono.test.simple.netty.core.config.AmeNettyConfig;
+import com.nonono.test.simple.netty.core.send.ReStartSocketClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,8 +16,8 @@ public class NettyClientConfiguration {
     private Integer nettyServerPort;
 
     @Bean
-    public NettySocketClient nettySocketClient() {
-        return new NettySocketClient(nettyServerHost, nettyServerPort);
+    public ReStartSocketClient nettySocketClient(AmeNettyConfig nettyConfig) {
+        return new ReStartSocketClient(nettyServerHost, nettyServerPort, nettyConfig);
     }
 
 }

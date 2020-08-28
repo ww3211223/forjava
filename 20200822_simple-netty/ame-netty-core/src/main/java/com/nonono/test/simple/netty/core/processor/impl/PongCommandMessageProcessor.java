@@ -15,7 +15,7 @@ public class PongCommandMessageProcessor extends BaseRawMessageChannelProcessor 
     public RawMessage process(ChannelHandlerContext ctx, RawMessage msg) {
         logger.info("pong");
         CommandProcessorFactory.getPongCommands().forEach(item -> {
-            item.execute(ctx);
+            item.executePong(ctx);
         });
         return null;
     }

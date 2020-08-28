@@ -9,76 +9,51 @@ import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFuture;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
-
+/**
+ * nettySocket客户端
+ */
 public class NettySocketClient {
 
     private static final Logger logger = LoggerFactory.getLogger(NettySocketClient.class);
 
-    private SocketClientSupervisor clientSupervisor;
-
-    /**
-     *
-     */
     private String hostAddress;
 
-    /**
-     *
-     */
     private int serverPort;
 
-    /**
-     *
-     */
     private ChannelFuture clientChannel;
 
-    /**
-     *
-     */
     private RawMessageEncoder messageEncoder = new RawMessageEncoder();
-
-    @Autowired
-    private AmeNettyConfig nettyConfig;
 
     public NettySocketClient(String hostAddress, int serverPort) {
         this.hostAddress = hostAddress;
         this.serverPort = serverPort;
-        this.clientSupervisor = new SocketClientSupervisor(nettyConfig, this);
     }
 
-
     /**
-     *
+     * 创建并启动socket
      */
     public void start() {
-        CountDownLatch latch = new CountDownLatch(1);
+        Bootstrap bootstrap = BootstrapFactory.FACT.getOrCreateBootstrap(hostAddress, serverPort);
         try {
-            Bootstrap bootstrap = BootstrapFactory.FACT.getOrCreateBootstrap(hostAddress, serverPort);
-
             clientChannel = bootstrap.connect(hostAddress, serverPort).sync();
-
-            logger.info("clientChannel is {}", clientChannel);
-
-            clientChannel.channel().closeFuture().addListener((f) -> {
-                logger.info("client channel closed, f is {}", f.getNow());
-            });
-        } catch (Exception e) {
-            logger.error("", e);
-        } finally {
-            latch.countDown();
-        }
-
-        try {
-            latch.await(5, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
-            logger.error("", e);
+            logger.error("connect socket error.", e);
         }
 
-        clientSupervisor.startSocket();
+        logger.info("clientChannel is {}", clientChannel);
+        clientChannel.channel().closeFuture().addListener((f) -> {
+            logger.info("client channel closed, f is {}", f.getNow());
+        });
         logger.info("netty client start done");
+        this.postStart();
+    }
+
+    /**
+     * 启动socket后续处理
+     */
+    public void postStart() {
+
     }
 
     /**

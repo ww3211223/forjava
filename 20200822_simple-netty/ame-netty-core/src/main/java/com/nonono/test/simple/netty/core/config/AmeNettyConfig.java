@@ -2,6 +2,7 @@ package com.nonono.test.simple.netty.core.config;
 
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 @Getter
 public class AmeNettyConfig {

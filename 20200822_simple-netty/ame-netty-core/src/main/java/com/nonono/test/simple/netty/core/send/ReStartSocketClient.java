@@ -1,8 +1,12 @@
 package com.nonono.test.simple.netty.core.send;
 
+import com.nonono.test.ame.core.json.Jack;
+import com.nonono.test.simple.netty.core.command.BaseCommandDirective;
 import com.nonono.test.simple.netty.core.command.CommandProcessorFactory;
 import com.nonono.test.simple.netty.core.command.IPongCommand;
 import com.nonono.test.simple.netty.core.config.AmeNettyConfig;
+import com.nonono.test.simple.netty.core.dto.ClientRegisterRequest;
+import com.nonono.test.simple.netty.core.message.JsonCommand;
 import com.nonono.test.simple.netty.core.message.RawMessage;
 import com.nonono.test.simple.netty.core.message.RawMessageType;
 import com.nonono.test.simple.netty.core.utils.RawMessages;
@@ -24,6 +28,11 @@ public class ReStartSocketClient extends NettySocketClient implements IPongComma
     private static final Logger log = LoggerFactory.getLogger(ReStartSocketClient.class);
 
     private AmeNettyConfig nettyConfig;
+
+    /**
+     * client标识
+     */
+    private String clientIdentify;
 
     /**
      * 是否连接
@@ -50,9 +59,10 @@ public class ReStartSocketClient extends NettySocketClient implements IPongComma
      */
     private int restartQuantity;
 
-    public ReStartSocketClient(String hostAddress, int serverPort, AmeNettyConfig nettyConfig) {
+    public ReStartSocketClient(String hostAddress, int serverPort, String clientIdentify, AmeNettyConfig nettyConfig) {
         super(hostAddress, serverPort);
         this.nettyConfig = nettyConfig;
+        this.clientIdentify = clientIdentify;
     }
 
     /**
@@ -64,6 +74,19 @@ public class ReStartSocketClient extends NettySocketClient implements IPongComma
         restartQuantity++;
         lastPreStartTime = LocalDateTime.now();
         lastPongTime = null;
+        if (nettyConfig.isSocketClientAutoRegister()) {
+            ClientRegisterRequest registerRequest = new ClientRegisterRequest();
+            registerRequest.setClientIdentify(clientIdentify);
+            JsonCommand command = new JsonCommand();
+            command.setDirective(BaseCommandDirective.CLIENT_REGISTER);
+            command.setDirectiveVal(BaseCommandDirective.CLIENT_REGISTER.getCode());
+            command.setData(Jack.toJson(registerRequest));
+            command.setStatus(0);
+            command.setMessage("client register");
+
+            RawMessage message = RawMessages.buildJsonMessage(nettyConfig.getSocketCurrentNo(), Jack.toJson(command));
+            this.send(message);
+        }
     }
 
     /**
@@ -73,19 +96,18 @@ public class ReStartSocketClient extends NettySocketClient implements IPongComma
         this.start();
     }
 
-    //@Scheduled(cron = "#{nettyConfig.getClientPingCron()}")
+    @Scheduled(cron = "#{ameNettyConfig.getClientPingCron()}")
     public void ping() {
         if (!nettyConfig.isClientRestartEnabled()) {
             return;
         }
         if (preConnected || isConnected) {
-            RawMessage message = new RawMessage();
-            RawMessages.from(RawMessageType.PING_COMMAND, 0, "ping");
+            RawMessage message = RawMessages.from(RawMessageType.PING_COMMAND, 0, "ping");
             send(message);
         }
     }
 
-    @Scheduled(cron = "#{nettyConfig.getClientSelfCheckCron()}")
+    @Scheduled(cron = "#{ameNettyConfig.getClientSelfCheckCron()}")
     public void socketCheck() {
         if (!nettyConfig.isClientRestartEnabled()
                 || (nettyConfig.getClientRestartMax() > 0 && restartQuantity > nettyConfig.getClientRestartMax())) {
@@ -122,6 +144,6 @@ public class ReStartSocketClient extends NettySocketClient implements IPongComma
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        CommandProcessorFactory.registerPongCommand(this);
+        CommandProcessorFactory.register(this);
     }
 }

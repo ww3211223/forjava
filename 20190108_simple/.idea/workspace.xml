@@ -4,7 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="749aeb4e-21f7-4665-8e9c-db88f3dd24f8" name="Default" comment="" />
+    <list default="true" id="749aeb4e-21f7-4665-8e9c-db88f3dd24f8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/AmeNettyAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/AmeNettyAutoConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/command/CommandProcessorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/command/CommandProcessorFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/command/ICommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/command/ICommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/command/IPongCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/command/IPongCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/config/AmeNettyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/config/AmeNettyConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/processor/impl/JsonCommandMessageProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/processor/impl/JsonCommandMessageProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/send/NettySocketClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/send/NettySocketClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/send/ReStartSocketClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/send/ReStartSocketClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/server/ChannelHandlerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/server/ChannelHandlerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/socket/RawMessageInboundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/socket/RawMessageInboundHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/callback/DeviceRegisterCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/callback/DeviceRegisterCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/command/ServerCtrlDeviceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/command/ServerCtrlDeviceCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/configs/NettyClientConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/configs/NettyClientConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/model/CommandDirective.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/model/DeviceRegisterCallbackRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/model/DeviceRegisterRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-server/src/main/java/com/nonono/test/simple/netty/server/command/DeviceRegisterCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-server/src/main/java/com/nonono/test/simple/netty/server/controller/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-server/src/main/java/com/nonono/test/simple/netty/server/controller/ServerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-server/src/main/java/com/nonono/test/simple/netty/server/model/CommandDirective.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-server/src/main/java/com/nonono/test/simple/netty/server/model/DeviceRegisterCallbackRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-server/src/main/java/com/nonono/test/simple/netty/server/model/DeviceRegisterRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-server/src/main/java/com/nonono/test/simple/netty/server/services/ChannelHandlerFactory.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,6 +196,7 @@
       <workItem from="1597237233539" duration="1368000" />
       <workItem from="1598064878778" duration="654000" />
       <workItem from="1598080575804" duration="1121000" />
+      <workItem from="1598652941803" duration="1391000" />
     </task>
     <servers />
   </component>
@@ -241,9 +268,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="632" y="137" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1597237401332" />
-    <state x="848" y="295" width="863" height="846" key="find.popup" timestamp="1598064893709">
+    <state x="848" y="295" width="863" height="846" key="find.popup" timestamp="1598654936263">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="848" y="295" width="863" height="846" key="find.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1598064893709" />
+    <state x="848" y="295" width="863" height="846" key="find.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1598654936263" />
   </component>
 </project>

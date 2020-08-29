@@ -1,11 +1,13 @@
 package com.nonono.test.simple.netty.core;
 
+import com.nonono.test.simple.netty.core.command.BaseClientRegisterCommand;
 import com.nonono.test.simple.netty.core.config.AmeNettyConfig;
 import com.nonono.test.simple.netty.core.processor.RawMessageEncoder;
 import com.nonono.test.simple.netty.core.processor.RawMessageFactory;
 import com.nonono.test.simple.netty.core.processor.impl.JsonCommandMessageProcessor;
 import com.nonono.test.simple.netty.core.processor.impl.PingCommandMessageProcessor;
 import com.nonono.test.simple.netty.core.processor.impl.PongCommandMessageProcessor;
+import com.nonono.test.simple.netty.core.server.AutoCleanChannelHandler;
 import com.nonono.test.simple.netty.core.server.NettySocketServer;
 import com.nonono.test.simple.netty.core.socket.RawMessageInboundHandler;
 import com.nonono.test.simple.netty.core.socket.RawMessageOutboundHandler;
@@ -68,5 +70,15 @@ public class AmeNettyAutoConfiguration {
         PongCommandMessageProcessor processor = new PongCommandMessageProcessor();
         RawMessageFactory.register(processor);
         return processor;
+    }
+
+    @Bean
+    public BaseClientRegisterCommand baseClientRegisterCommand(AmeNettyConfig conf) {
+        return new BaseClientRegisterCommand(conf.getSocketCurrentNo());
+    }
+
+    @Bean
+    public AutoCleanChannelHandler autoCleanChannelHandler() {
+        return new AutoCleanChannelHandler();
     }
 }

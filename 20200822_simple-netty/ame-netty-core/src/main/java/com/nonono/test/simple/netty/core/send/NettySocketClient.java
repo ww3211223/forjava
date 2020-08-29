@@ -52,7 +52,7 @@ public class NettySocketClient {
     /**
      * 启动socket后续处理
      */
-    public void postStart() {
+    protected void postStart() {
 
     }
 

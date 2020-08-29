@@ -15,9 +15,12 @@ public class NettyClientConfiguration {
     @Value("${simple.netty.server.port}")
     private Integer nettyServerPort;
 
+    @Value("${simple.netty.client.identify}")
+    private String nettyClientIdentify;
+
     @Bean
     public ReStartSocketClient nettySocketClient(AmeNettyConfig nettyConfig) {
-        return new ReStartSocketClient(nettyServerHost, nettyServerPort, nettyConfig);
+        return new ReStartSocketClient(nettyServerHost, nettyServerPort, nettyClientIdentify, nettyConfig);
     }
 
 }

@@ -72,7 +72,6 @@ public class RawMessageInboundHandler extends ChannelInboundHandlerAdapter {
             String str = new String(data);
 
             RawMessage raw = messageEncoder.decode(data);
-            ChannelHandlerFactory.register(raw.getClientNo(), ctx);
 
             // 非 ping消息, 才打印debug日志
             if (raw.getMessageType() != RawMessageType.PING_COMMAND.getCode()) {

@@ -20,6 +20,10 @@ public class JsonCommandMessageProcessor extends BaseRawMessageChannelProcessor 
         JsonCommand commandReq = RawMessages.parseJsonCommand(msg.getClientNo(), msg.getBodyText());
 
         ICommand command = CommandProcessorFactory.getCommand(commandReq.getDirective());
+        if (command == null) {
+            logger.warn("JsonCommand#{} has not processor.", commandReq.getDirective().getCode());
+            return null;
+        }
 
         JsonCommand commandResp = command.execute(ctx, commandReq);
         if (commandResp == null) {// no need to response

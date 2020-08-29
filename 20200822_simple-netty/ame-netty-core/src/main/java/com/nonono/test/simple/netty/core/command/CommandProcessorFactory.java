@@ -10,19 +10,18 @@ import java.util.Map;
 public class CommandProcessorFactory {
 
     private static final Map<CmdDirective, BaseCommand> commands = new HashMap<>();
-
     private static final List<IPongCommand> pongCommands = Lists.newArrayList();
 
     public static void register(BaseCommand<?> command) {
         commands.put(command.getDirective(), command);
     }
 
-    public static ICommand getCommand(CmdDirective commandName) {
-        return commands.get(commandName);
+    public static void register(IPongCommand command) {
+        pongCommands.add(command);
     }
 
-    public static void registerPongCommand(IPongCommand command) {
-        pongCommands.add(command);
+    public static ICommand getCommand(CmdDirective commandName) {
+        return commands.get(commandName);
     }
 
     public static List<IPongCommand> getPongCommands() {

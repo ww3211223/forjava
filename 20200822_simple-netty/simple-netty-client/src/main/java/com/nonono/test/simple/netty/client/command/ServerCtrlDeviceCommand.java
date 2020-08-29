@@ -2,9 +2,9 @@ package com.nonono.test.simple.netty.client.command;
 
 import com.nonono.test.ame.core.json.Jack;
 import com.nonono.test.ame.core.message.CmdDirective;
-import com.nonono.test.simple.netty.client.model.CommandDirective;
 import com.nonono.test.simple.netty.client.model.ServerCtrlDeviceRequest;
 import com.nonono.test.simple.netty.core.command.BaseCommand;
+import com.nonono.test.simple.netty.core.command.BaseCommandDirective;
 import com.nonono.test.simple.netty.core.message.JsonCommand;
 import io.netty.channel.ChannelHandlerContext;
 import org.slf4j.Logger;
@@ -24,7 +24,7 @@ public class ServerCtrlDeviceCommand extends BaseCommand<ServerCtrlDeviceRequest
 
     @Override
     public CmdDirective getDirective() {
-        return CommandDirective.SERVER_CTRL_DEVICE;
+        return BaseCommandDirective.SERVER_ISSUANCE;
     }
 
 }

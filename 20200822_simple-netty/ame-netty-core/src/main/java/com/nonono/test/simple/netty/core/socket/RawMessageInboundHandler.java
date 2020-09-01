@@ -4,7 +4,6 @@ import com.nonono.test.simple.netty.core.message.RawMessage;
 import com.nonono.test.simple.netty.core.message.RawMessageType;
 import com.nonono.test.simple.netty.core.processor.RawMessageEncoder;
 import com.nonono.test.simple.netty.core.server.ChannelHandlerFactory;
-import com.nonono.test.simple.netty.core.server.NettySocketServer;
 import com.nonono.test.simple.netty.core.utils.Bye;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;
@@ -37,7 +36,6 @@ public class RawMessageInboundHandler extends ChannelInboundHandlerAdapter {
         long s1 = System.currentTimeMillis();
 
         ByteBuf in = (ByteBuf) msg;
-        in.resetReaderIndex();
 
         int ava = in.readableBytes();
         logger.debug("begin decode in bytes length - {}, ctx - {}", ava, System.identityHashCode(ctx));

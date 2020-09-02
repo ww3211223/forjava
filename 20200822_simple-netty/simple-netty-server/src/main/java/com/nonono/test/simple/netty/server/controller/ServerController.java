@@ -51,10 +51,20 @@ public class ServerController {
 
         String testBody = "{\"requestId\":0,\"clientNo\":90001,\"directiveVal\":60001,\"data\":\"{\\\"data\\\":{\\\"warehouseNumber\\\":\\\"ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002ZJ-CWH-002-ZJ-CWH-002\\\",\\\"storageAreaId\\\":5,\\\"equipmentId\\\":6,\\\"action\\\":0,\\\"data\\\":\\\"25\\\",\\\"gateway\\\":\\\"192.168.99.200\\\",\\\"channelNumber\\\":\\\"7-1\\\"},\\\"deviceType\\\":8}\",\"status\":0,\"message\":\"server ctrl device.\"}";
         //RawMessage message = RawMessages.buildJsonMessage(config.getSocketCurrentNo(), Jack.toJson(command));
-        RawMessage message = RawMessages.buildJsonMessage(config.getSocketCurrentNo(), testBody);
-        byte[] bytesData = messageEncoder.encode(message);
-        ByteBuf outBuf = Unpooled.copiedBuffer(bytesData);
-        channelHandlerContext.channel().writeAndFlush(outBuf);
+
+        for (int i = 1; i < 1000; i++) {
+            try {
+                Thread.sleep(300);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            RawMessage message = RawMessages.buildJsonMessage(config.getSocketCurrentNo(), testBody);
+            byte[] bytesData = messageEncoder.encode(message);
+            ByteBuf outBuf = Unpooled.copiedBuffer(bytesData);
+            channelHandlerContext.channel().writeAndFlush(outBuf);
+        }
+
         return "ok";
     }
 }

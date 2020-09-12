@@ -3,11 +3,15 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/20191130_spring_cloud.iml" filepath="$PROJECT_DIR$/20191130_spring_cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-api-gateway/spring-cloud-api-gateway.iml" filepath="$PROJECT_DIR$/spring-cloud-api-gateway/spring-cloud-api-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-client-api/spring-cloud-client-api.iml" filepath="$PROJECT_DIR$/spring-cloud-client-api/spring-cloud-client-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-client-one/spring-cloud-client-one.iml" filepath="$PROJECT_DIR$/spring-cloud-client-one/spring-cloud-client-one.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-hystrix-dashboard/spring-cloud-hystrix-dashboard.iml" filepath="$PROJECT_DIR$/spring-cloud-hystrix-dashboard/spring-cloud-hystrix-dashboard.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-registry-one/spring-cloud-registry-one.iml" filepath="$PROJECT_DIR$/spring-cloud-registry-one/spring-cloud-registry-one.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-registry-two/spring-cloud-registry-two.iml" filepath="$PROJECT_DIR$/spring-cloud-registry-two/spring-cloud-registry-two.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-server-one/spring-cloud-server-one.iml" filepath="$PROJECT_DIR$/spring-cloud-server-one/spring-cloud-server-one.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-server-two/spring-cloud-server-two.iml" filepath="$PROJECT_DIR$/spring-cloud-server-two/spring-cloud-server-two.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-turbine/spring-cloud-turbine.iml" filepath="$PROJECT_DIR$/spring-cloud-turbine/spring-cloud-turbine.iml" />
     </modules>
   </component>
 </project>

@@ -7,21 +7,29 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-cloud-server-one" />
+        <module name="spring-cloud-api-gateway" />
         <module name="spring-cloud-registry-two" />
+        <module name="spring-cloud-client-one" />
+        <module name="spring-cloud-server-one" />
         <module name="spring-cloud-server-two" />
         <module name="spring-cloud-registry-one" />
+        <module name="spring-cloud-hystrix-dashboard" />
+        <module name="spring-cloud-client-api" />
         <module name="20191130_spring_cloud" />
-        <module name="spring-cloud-client-one" />
+        <module name="spring-cloud-turbine" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="20191130_spring_cloud" target="1.8" />
+      <module name="spring-cloud-api-gateway" target="1.8" />
+      <module name="spring-cloud-client-api" target="1.8" />
       <module name="spring-cloud-client-one" target="1.8" />
+      <module name="spring-cloud-hystrix-dashboard" target="1.8" />
       <module name="spring-cloud-registry-one" target="1.8" />
       <module name="spring-cloud-registry-two" target="1.8" />
       <module name="spring-cloud-server-one" target="1.8" />
       <module name="spring-cloud-server-two" target="1.8" />
+      <module name="spring-cloud-turbine" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

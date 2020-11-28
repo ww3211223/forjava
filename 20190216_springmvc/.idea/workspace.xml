@@ -10,7 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb6bff66-abe5-41c8-ad36-fc26bd12a815" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190108_simple/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190108_simple/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190108_simple/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190108_simple/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190108_simple/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190108_simple/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190108_simple/src/main/java/com/nonono/test/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20190108_simple/src/main/java/com/nonono/test/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20191130_spring_cloud/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20191130_spring_cloud/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20191130_spring_cloud/spring-cloud-api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../20191130_spring_cloud/spring-cloud-api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200226_redis_test/src/main/java/com/nonono/test/redis/TestJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200226_redis_test/src/main/java/com/nonono/test/redis/TestJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200226_redis_test/src/main/java/com/nonono/test/redis/TestRedis.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200226_redis_test/src/main/java/com/nonono/test/redis/TestRedis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200226_redis_test/src/main/java/com/nonono/test/redis/TestRedissonLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200226_redis_test/src/main/java/com/nonono/test/redis/TestRedissonLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200226_redis_test/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../20200226_redis_test/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +63,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="J:\MySoft\IntelliJ IDEA IU 2020.2\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="E:\Soft\Intellij IDEA IU 2020.2\IntelliJ IDEA 2020.2\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -60,9 +71,7 @@
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="1Tq1zS9f9uiGY5WbkaOFthkCdg8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -73,7 +82,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547721635373" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../20190127_springboot" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -87,7 +96,7 @@
       <recent name="J:\Work\JavaProject\20190216_springmvc\src\main\resources\assets\js" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.TestController.testNormalController">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -241,16 +250,15 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.App" />
       <item itemvalue="JUnit.TestController.testNormalController" />
       <item itemvalue="JUnit.TestController.testRestController" />
       <item itemvalue="Tomcat Server.MyTomcat" />
+      <item itemvalue="应用程序.App" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestController.testRestController" />
         <item itemvalue="JUnit.TestController.testNormalController" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -283,6 +291,7 @@
       <workItem from="1555732540887" duration="653000" />
       <workItem from="1597670314931" duration="2752000" />
       <workItem from="1598107323328" duration="9000" />
+      <workItem from="1604625685040" duration="2527000" />
     </task>
     <servers />
   </component>
@@ -325,9 +334,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="848" y="295" width="863" height="810" key="find.popup" timestamp="1597670317545">
+    <state x="998" y="395" key="FileChooserDialogImpl" timestamp="1604625689596">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="998" y="395" key="FileChooserDialogImpl/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1604625689596" />
+    <state x="848" y="295" width="863" height="810" key="find.popup" timestamp="1604628325941">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="848" y="295" width="863" height="810" key="find.popup/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1604628325941" />
     <state x="848" y="295" width="863" height="810" key="find.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1597670317545" />
   </component>
   <component name="debuggerHistoryManager">

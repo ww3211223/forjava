@@ -85,20 +85,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bdf894e-61db-417e-862a-33f68baae991" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../20190108_simple/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190108_simple/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190108_simple/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190108_simple/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190108_simple/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190108_simple/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190108_simple/src/main/java/com/nonono/test/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20190108_simple/src/main/java/com/nonono/test/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190216_springmvc/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190216_springmvc/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190216_springmvc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190216_springmvc/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-cloud-api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-api-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud-client-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-client-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud-client-api/src/main/java/com/nonono/test/spring/cloud/client/api/ClientApiStart.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud-client-api/src/test/java/com/nonono/test/spring/cloud/client/api/SpringCloudClientApiApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud-client-one/spring-cloud-client-one.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-client-one/spring-cloud-client-one.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud-registry-one/spring-cloud-registry-one.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-registry-one/spring-cloud-registry-one.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud-registry-two/spring-cloud-registry-two.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-registry-two/spring-cloud-registry-two.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-server-one/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-server-one/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-cloud-server-one/spring-cloud-server-one.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-server-one/spring-cloud-server-one.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-server-one/src/main/java/com/nonono/test/cloud/server/one/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-server-one/src/main/java/com/nonono/test/cloud/server/one/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-server-one/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-server-one/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-server-two/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-server-two/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-cloud-server-two/spring-cloud-server-two.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-server-two/spring-cloud-server-two.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-server-two/src/main/java/com/nonono/test/cloud/server/two/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-server-two/src/main/java/com/nonono/test/cloud/server/two/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-server-two/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-server-two/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200226_redis_test/src/main/java/com/nonono/test/redis/TestJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200226_redis_test/src/main/java/com/nonono/test/redis/TestJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200226_redis_test/src/main/java/com/nonono/test/redis/TestRedis.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200226_redis_test/src/main/java/com/nonono/test/redis/TestRedis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200226_redis_test/src/main/java/com/nonono/test/redis/TestRedissonLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200226_redis_test/src/main/java/com/nonono/test/redis/TestRedissonLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200226_redis_test/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../20200226_redis_test/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +151,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/spring-cloud-server-two/src/main/resources" />
     <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.24655014" />
@@ -151,11 +162,12 @@
       <recent name="com.nonono.test.cloud.registry.one" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Work2\forjava\20191130_spring_cloud\spring-cloud-server-two\src\main\resources" />
       <recent name="E:\Work2\forjava\20191130_spring_cloud" />
       <recent name="E:\Work2\forjava\20191130_spring_cloud_registry" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiGatewayStart">
+  <component name="RunManager" selected="Spring Boot.ServerTwoStart">
     <configuration name="ClientOneStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.nonono.test.cloud.client.main.ClientOneStart" />
       <module name="spring-cloud-client-one" />
@@ -228,6 +240,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ConfigStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-cloud-config" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nonono.test.spring.cloud.config.ConfigStart" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HystrixDashboardStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="spring-cloud-hystrix-dashboard" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.nonono.test.cloud.hystrix.dashboard.HystrixDashboardStart" />
@@ -263,23 +282,24 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.ServerTwoStart" />
       <item itemvalue="Spring Boot.ClientApiStart" />
-      <item itemvalue="Spring Boot.ServerOneStart" />
+      <item itemvalue="Spring Boot.HystrixDashboardStart" />
+      <item itemvalue="Spring Boot.ServerTwoStart" />
+      <item itemvalue="Spring Boot.TurbineStart" />
+      <item itemvalue="Spring Boot.ConfigStart" />
       <item itemvalue="Spring Boot.ApiGatewayStart" />
+      <item itemvalue="Spring Boot.ServerOneStart" />
       <item itemvalue="应用程序.ClientOneStart" />
       <item itemvalue="应用程序.RegistryOneStart" />
       <item itemvalue="应用程序.RegistryTwoStart" />
-      <item itemvalue="Spring Boot.HystrixDashboardStart" />
-      <item itemvalue="Spring Boot.TurbineStart" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ApiGatewayStart" />
-        <item itemvalue="应用程序.ClientOneStart" />
         <item itemvalue="Spring Boot.ServerOneStart" />
         <item itemvalue="应用程序.RegistryTwoStart" />
         <item itemvalue="应用程序.RegistryOneStart" />
+        <item itemvalue="Spring Boot.ApiGatewayStart" />
+        <item itemvalue="应用程序.ClientOneStart" />
       </list>
     </recent_temporary>
   </component>
@@ -295,7 +315,15 @@
       <option name="presentableId" value="Default" />
       <updated>1575093179381</updated>
       <workItem from="1599891170329" duration="319000" />
-      <workItem from="1599891940763" duration="2949000" />
+      <workItem from="1599891940763" duration="3010000" />
+      <workItem from="1600044835587" duration="592000" />
+      <workItem from="1600131999224" duration="2017000" />
+      <workItem from="1600496596838" duration="1207000" />
+      <workItem from="1600652531118" duration="1183000" />
+      <workItem from="1602504355641" duration="1083000" />
+      <workItem from="1606023813439" duration="1336000" />
+      <workItem from="1606132049456" duration="2940000" />
+      <workItem from="1606528787837" duration="9506000" />
     </task>
     <servers />
   </component>
@@ -312,6 +340,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1038" y="338" key="#com.intellij.ide.util.MemberChooser" timestamp="1599892754780">
@@ -322,90 +351,69 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="944" y="385" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1599892237844" />
-    <state x="1583" y="459" key="#xdebugger.evaluate" timestamp="1595260265482">
+    <state width="2509" height="475" key="GridCell.Tab.0.bottom" timestamp="1606542274332">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1583" y="459" key="#xdebugger.evaluate/0.0.2560.1400@0.0.2560.1400" timestamp="1595260265482" />
-    <state width="476" height="582" key="DebuggerActiveHint" timestamp="1595260243847">
+    <state width="2509" height="475" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1606542274332" />
+    <state width="2509" height="475" key="GridCell.Tab.0.center" timestamp="1606542274332">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="476" height="582" key="DebuggerActiveHint/0.0.2560.1400@0.0.2560.1400" timestamp="1595260243847" />
-    <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog" timestamp="1592187896570">
+    <state width="2509" height="475" key="GridCell.Tab.0.center/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1606542274332" />
+    <state width="2509" height="475" key="GridCell.Tab.0.left" timestamp="1606542274332">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1592187896570" />
-    <state x="1007" y="396" key="FileChooserDialogImpl" timestamp="1595286526527">
+    <state width="2509" height="475" key="GridCell.Tab.0.left/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1606542274332" />
+    <state width="2509" height="475" key="GridCell.Tab.0.right" timestamp="1606542274332">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1007" y="396" key="FileChooserDialogImpl/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1591609532227" />
-    <state x="1007" y="396" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1595286526527" />
-    <state width="2509" height="475" key="GridCell.Tab.0.bottom" timestamp="1599894271274">
+    <state width="2509" height="475" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1606542274332" />
+    <state width="2509" height="475" key="GridCell.Tab.1.bottom" timestamp="1606542274332">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2509" height="475" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1599894271274" />
-    <state width="2507" height="414" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1595261364933" />
-    <state width="2509" height="475" key="GridCell.Tab.0.center" timestamp="1599894271274">
+    <state width="2509" height="475" key="GridCell.Tab.1.bottom/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1606542274332" />
+    <state width="2509" height="475" key="GridCell.Tab.1.center" timestamp="1606542274332">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2509" height="475" key="GridCell.Tab.0.center/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1599894271274" />
-    <state width="2507" height="414" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1595261364933" />
-    <state width="2509" height="475" key="GridCell.Tab.0.left" timestamp="1599894271274">
+    <state width="2509" height="475" key="GridCell.Tab.1.center/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1606542274332" />
+    <state width="2509" height="475" key="GridCell.Tab.1.left" timestamp="1606542274332">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2509" height="475" key="GridCell.Tab.0.left/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1599894271274" />
-    <state width="2507" height="414" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1595261364933" />
-    <state width="2509" height="475" key="GridCell.Tab.0.right" timestamp="1599894271274">
+    <state width="2509" height="475" key="GridCell.Tab.1.left/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1606542274332" />
+    <state width="2509" height="475" key="GridCell.Tab.1.right" timestamp="1606542274332">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2509" height="475" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1599894271274" />
-    <state width="2507" height="414" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1595261364933" />
-    <state width="2509" height="475" key="GridCell.Tab.1.bottom" timestamp="1599894271091">
+    <state width="2509" height="475" key="GridCell.Tab.1.right/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1606542274332" />
+    <state width="2509" height="475" key="GridCell.Tab.2.bottom" timestamp="1606542274332">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2509" height="475" key="GridCell.Tab.1.bottom/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1599894271091" />
-    <state width="2507" height="414" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1595261364934" />
-    <state width="2509" height="475" key="GridCell.Tab.1.center" timestamp="1599894271091">
+    <state width="2509" height="475" key="GridCell.Tab.2.bottom/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1606542274332" />
+    <state width="2509" height="475" key="GridCell.Tab.2.center" timestamp="1606542274332">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2509" height="475" key="GridCell.Tab.1.center/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1599894271091" />
-    <state width="2507" height="414" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1595261364934" />
-    <state width="2509" height="475" key="GridCell.Tab.1.left" timestamp="1599894271091">
+    <state width="2509" height="475" key="GridCell.Tab.2.center/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1606542274332" />
+    <state width="2509" height="475" key="GridCell.Tab.2.left" timestamp="1606542274332">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2509" height="475" key="GridCell.Tab.1.left/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1599894271091" />
-    <state width="2507" height="414" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1595261364933" />
-    <state width="2509" height="475" key="GridCell.Tab.1.right" timestamp="1599894271091">
+    <state width="2509" height="475" key="GridCell.Tab.2.left/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1606542274332" />
+    <state width="2509" height="475" key="GridCell.Tab.2.right" timestamp="1606542274332">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2509" height="475" key="GridCell.Tab.1.right/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1599894271091" />
-    <state width="2507" height="414" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1595261364934" />
-    <state width="2509" height="475" key="GridCell.Tab.2.bottom" timestamp="1599894271092">
+    <state width="2509" height="475" key="GridCell.Tab.2.right/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1606542274332" />
+    <state x="632" y="170" key="SettingsEditor" timestamp="1606132760561">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2509" height="475" key="GridCell.Tab.2.bottom/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1599894271092" />
-    <state width="2509" height="475" key="GridCell.Tab.2.center" timestamp="1599894271092">
+    <state x="632" y="170" key="SettingsEditor/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1606132760561" />
+    <state x="950" y="368" width="1186" height="664" key="find.popup" timestamp="1606132860960">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2509" height="475" key="GridCell.Tab.2.center/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1599894271092" />
-    <state width="2509" height="475" key="GridCell.Tab.2.left" timestamp="1599894271092">
+    <state x="950" y="368" width="1186" height="664" key="find.popup/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1606132860960" />
+    <state x="745" y="281" key="new project wizard" timestamp="1606132401025">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2509" height="475" key="GridCell.Tab.2.left/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1599894271092" />
-    <state width="2509" height="475" key="GridCell.Tab.2.right" timestamp="1599894271092">
+    <state x="745" y="281" key="new project wizard/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1606132401025" />
+    <state x="859" y="308" width="840" height="1034" key="search.everywhere.popup" timestamp="1606026434879">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2509" height="475" key="GridCell.Tab.2.right/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1599894271092" />
-    <state x="632" y="170" key="SettingsEditor" timestamp="1595260190245">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="632" y="170" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1595260190245" />
-    <state x="874" y="294" width="1083" height="724" key="find.popup" timestamp="1592549871396">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="874" y="294" width="1083" height="724" key="find.popup/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1592549871396" />
-    <state x="859" y="308" width="840" height="1034" key="search.everywhere.popup" timestamp="1595233735107">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="859" y="308" width="840" height="1034" key="search.everywhere.popup/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1595233735107" />
+    <state x="859" y="308" width="840" height="1034" key="search.everywhere.popup/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1606026434879" />
   </component>
 </project>

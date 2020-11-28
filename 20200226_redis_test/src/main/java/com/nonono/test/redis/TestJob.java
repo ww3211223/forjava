@@ -16,7 +16,8 @@ public class TestJob implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-//        testRedis.testStr();
+        //testRedis.testIncr();
+        //testRedis.testTemp();
 //        testRedis.testObj();
 //        testRedis.testIncr();
 //        testRedis.testRedisLock();
@@ -24,7 +25,9 @@ public class TestJob implements ApplicationRunner {
 //        testRedis.testSet();
 //        testRedis.testKeys();
         //testRedis.testScanKeys();
-        testRedis.testDelayQueue();
+        //testRedis.testDelayQueue();
+        redissonLockTest.testReentrantLock(3000);
+        redissonLockTest.testReentrantLock2();
 
 //        redissonLockTest.testReentrantLock(5);
 //        redissonLockTest.testReentrantLock(5);

@@ -37,6 +37,10 @@ public class TestRedis {
         testThreadPool = new ThreadPoolExecutor(5, 5, 1000, TimeUnit.SECONDS, new LinkedBlockingQueue<>());
     }
 
+    public void testTemp() {
+        System.out.println("testRedis.temp(): " + stringRedisTemplate.opsForValue().get("CRM:APP_USER:228:SIMPLE"));
+    }
+
     public void testStr() {
         stringRedisTemplate.opsForValue().set("abc2", "123456", 10, TimeUnit.SECONDS);
         System.out.println("testRedis.test(): " + stringRedisTemplate.opsForValue().get("abc"));
@@ -44,7 +48,7 @@ public class TestRedis {
     }
 
     public void testIncr() {
-        stringRedisTemplate.opsForValue().increment("increment");
+        stringRedisTemplate.opsForValue().increment("CRM:MKT:GROUP:10161:ASSIGN:RULE:VERSION");
         System.out.println("testIncr is end.");
     }
 

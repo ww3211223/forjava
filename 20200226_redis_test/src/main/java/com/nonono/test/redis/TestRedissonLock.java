@@ -36,7 +36,8 @@ public class TestRedissonLock {
             String key = "redisson:test:key";
             System.out.println(Thread.currentThread().getName() + " | testReentrantLock begin." + LocalDateTime.now().toString());
             RLock lock = redissonClient.getLock(key);
-            lock.lock(leaseTime, TimeUnit.SECONDS);
+
+            lock.lock(leaseTime, TimeUnit.MILLISECONDS);
             System.out.println(Thread.currentThread().getName() + " | testReentrantLock lock." + LocalDateTime.now().toString());
             try {
                 Thread.sleep(2000);
@@ -45,6 +46,23 @@ public class TestRedissonLock {
             }
             System.out.println(Thread.currentThread().getName() + " | testReentrantLock end." + LocalDateTime.now().toString());
             lock.unlock();
+        });
+    }
+
+    public void testReentrantLock2() {
+        testThreadPool.execute(() -> {
+            String key = "redisson:test:key";
+            System.out.println(Thread.currentThread().getName() + " | testReentrantLock2 begin." + LocalDateTime.now().toString());
+            RLock lock = redissonClient.getLock(key);
+            try {
+                if (lock.tryLock(300, TimeUnit.MILLISECONDS)) {
+                    System.out.println(Thread.currentThread().getName() + " | testReentrantLock2 尝试获取锁成功." + LocalDateTime.now().toString());
+                } else {
+                    System.out.println(Thread.currentThread().getName() + " | testReentrantLock2 尝试获取锁失败." + LocalDateTime.now().toString());
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         });
     }
 

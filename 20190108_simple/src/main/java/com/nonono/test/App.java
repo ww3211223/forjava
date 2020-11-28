@@ -41,6 +41,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.util.Base64Utils;
 
 import java.lang.reflect.Type;
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Map;
 import java.util.Random;
 import java.util.TreeMap;
@@ -75,7 +79,13 @@ public class App {
 //        Duration duration = Duration.between(start, end);
 //        System.out.println(duration.toMillis());
         //futureTest();
-        testTaskScheduler();
+        //testTaskScheduler();
+
+        LocalDateTime time1 = LocalDateTime.now();
+        LocalDateTime time2 = time1.minusSeconds(10);
+        Duration duration = Duration.between(time2, time1);
+        System.out.println(duration.getSeconds());
+
     }
 
     public static void testFindBean() {

@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-api-gateway/spring-cloud-api-gateway.iml" filepath="$PROJECT_DIR$/spring-cloud-api-gateway/spring-cloud-api-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-client-api/spring-cloud-client-api.iml" filepath="$PROJECT_DIR$/spring-cloud-client-api/spring-cloud-client-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-client-one/spring-cloud-client-one.iml" filepath="$PROJECT_DIR$/spring-cloud-client-one/spring-cloud-client-one.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-config/spring-cloud-config.iml" filepath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-hystrix-dashboard/spring-cloud-hystrix-dashboard.iml" filepath="$PROJECT_DIR$/spring-cloud-hystrix-dashboard/spring-cloud-hystrix-dashboard.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-registry-one/spring-cloud-registry-one.iml" filepath="$PROJECT_DIR$/spring-cloud-registry-one/spring-cloud-registry-one.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-registry-two/spring-cloud-registry-two.iml" filepath="$PROJECT_DIR$/spring-cloud-registry-two/spring-cloud-registry-two.iml" />

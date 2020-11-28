@@ -1,9 +1,12 @@
 package com.nonono.test.cloud.server.one.controller;
 
 import com.google.common.collect.Lists;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,6 +14,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.logging.Logger;
 
+@RefreshScope
 @RestController
 @RequestMapping("/test")
 public class TestController {
@@ -69,5 +73,21 @@ public class TestController {
         }
 
         return "server-result";
+    }
+
+    @Value("${from:}")
+    private String configCenterStr;
+
+    @Value("${common-test-name:}")
+    private String commonTestName;
+
+    @RequestMapping(value = "/config_center", method = RequestMethod.GET)
+    public String testConfigCenter() {
+        return StringUtils.isEmpty(configCenterStr) ? "null" : configCenterStr;
+    }
+
+    @RequestMapping(value = "/config_center2", method = RequestMethod.GET)
+    public String testConfigCenter2() {
+        return StringUtils.isEmpty(commonTestName) ? "null" : commonTestName;
     }
 }

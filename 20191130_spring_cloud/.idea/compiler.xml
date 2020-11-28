@@ -11,6 +11,7 @@
         <module name="spring-cloud-registry-two" />
         <module name="spring-cloud-client-one" />
         <module name="spring-cloud-server-one" />
+        <module name="spring-cloud-config" />
         <module name="spring-cloud-server-two" />
         <module name="spring-cloud-registry-one" />
         <module name="spring-cloud-hystrix-dashboard" />
@@ -24,6 +25,7 @@
       <module name="spring-cloud-api-gateway" target="1.8" />
       <module name="spring-cloud-client-api" target="1.8" />
       <module name="spring-cloud-client-one" target="1.8" />
+      <module name="spring-cloud-config" target="1.8" />
       <module name="spring-cloud-hystrix-dashboard" target="1.8" />
       <module name="spring-cloud-registry-one" target="1.8" />
       <module name="spring-cloud-registry-two" target="1.8" />
@@ -36,6 +38,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="20191130_spring_cloud" options="" />
       <module name="spring-cloud-client-one" options="" />
+      <module name="spring-cloud-config" options="" />
       <module name="spring-cloud-registry-one" options="" />
     </option>
   </component>

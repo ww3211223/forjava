@@ -5,31 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="749aeb4e-21f7-4665-8e9c-db88f3dd24f8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/AmeNettyAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/AmeNettyAutoConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/command/CommandProcessorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/command/CommandProcessorFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/command/ICommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/command/ICommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/command/IPongCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/command/IPongCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/config/AmeNettyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/config/AmeNettyConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/processor/impl/JsonCommandMessageProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/processor/impl/JsonCommandMessageProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/send/NettySocketClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/send/NettySocketClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/send/ReStartSocketClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/send/ReStartSocketClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/server/ChannelHandlerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/server/ChannelHandlerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/socket/RawMessageInboundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/ame-netty-core/src/main/java/com/nonono/test/simple/netty/core/socket/RawMessageInboundHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/callback/DeviceRegisterCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/callback/DeviceRegisterCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/command/ServerCtrlDeviceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/command/ServerCtrlDeviceCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/configs/NettyClientConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/configs/NettyClientConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/model/CommandDirective.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/model/DeviceRegisterCallbackRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/java/com/nonono/test/simple/netty/client/model/DeviceRegisterRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-client/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-server/src/main/java/com/nonono/test/simple/netty/server/command/DeviceRegisterCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-server/src/main/java/com/nonono/test/simple/netty/server/controller/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-server/src/main/java/com/nonono/test/simple/netty/server/controller/ServerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-server/src/main/java/com/nonono/test/simple/netty/server/model/CommandDirective.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-server/src/main/java/com/nonono/test/simple/netty/server/model/DeviceRegisterCallbackRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-server/src/main/java/com/nonono/test/simple/netty/server/model/DeviceRegisterRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20200822_simple-netty/simple-netty-server/src/main/java/com/nonono/test/simple/netty/server/services/ChannelHandlerFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nonono/test/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nonono/test/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190216_springmvc/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190216_springmvc/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190216_springmvc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190216_springmvc/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20191130_spring_cloud/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20191130_spring_cloud/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20191130_spring_cloud/spring-cloud-api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../20191130_spring_cloud/spring-cloud-api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200226_redis_test/src/main/java/com/nonono/test/redis/TestJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200226_redis_test/src/main/java/com/nonono/test/redis/TestJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200226_redis_test/src/main/java/com/nonono/test/redis/TestRedis.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200226_redis_test/src/main/java/com/nonono/test/redis/TestRedis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200226_redis_test/src/main/java/com/nonono/test/redis/TestRedissonLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200226_redis_test/src/main/java/com/nonono/test/redis/TestRedissonLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20200226_redis_test/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../20200226_redis_test/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +37,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="J:\MySoft\IntelliJ IDEA Community Edition 2019.1.1\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="E:\Soft\Intellij IDEA IU 2020.2\IntelliJ IDEA 2020.2\plugins\maven\lib\maven3" />
         <option name="userSettingsFile" value="J:\MySoft\apache-maven-3.3.9\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -70,13 +57,14 @@
     <property name="SearchEverywhereHistoryKey" value="AsyncConfigurationSelector&#9;PSI&#9;JAVA://org.springframework.scheduling.annotation.AsyncConfigurationSelector&#10;AspectJAutoProxyRegistrar&#9;FILE&#9;jar://J:/Work/Resource/org/springframework/spring-context/4.1.9.RELEASE/spring-context-4.1.9.RELEASE.jar!/org/springframework/context/annotation/AspectJAutoProxyRegistrar.class" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../20190127_springboot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../20200226_redis_test" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -89,7 +77,7 @@
       <recent name="J:\Work\JavaProject\20190108_simple\target\classes\com\nonono\test\aware" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DemoBeanIntegrationTests.prodBeanShouldInject">
+  <component name="RunManager" selected="应用程序.App">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -97,9 +85,10 @@
       </method>
     </configuration>
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.nonono.test.App" />
       <module name="20190108_simple" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.nonono.test.aop.*" />
@@ -112,6 +101,17 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -150,11 +150,12 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.App" />
       <item itemvalue="JUnit.DemoBeanIntegrationTests.prodBeanShouldInject" />
+      <item itemvalue="应用程序.App" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.App" />
         <item itemvalue="JUnit.DemoBeanIntegrationTests.prodBeanShouldInject" />
       </list>
     </recent_temporary>
@@ -197,6 +198,12 @@
       <workItem from="1598064878778" duration="654000" />
       <workItem from="1598080575804" duration="1121000" />
       <workItem from="1598652941803" duration="1391000" />
+      <workItem from="1600400641246" duration="498000" />
+      <workItem from="1600401154401" duration="2202000" />
+      <workItem from="1600480494683" duration="2582000" />
+      <workItem from="1600775881542" duration="933000" />
+      <workItem from="1600935051587" duration="421000" />
+      <workItem from="1605606222920" duration="759000" />
     </task>
     <servers />
   </component>
@@ -224,49 +231,55 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="957" y="419" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1595250963780">
+    <state x="730" y="345" width="1255" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600400819702">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="957" y="419" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1595250963780" />
-    <state x="1007" y="394" key="FileChooserDialogImpl" timestamp="1598081668186">
+    <state x="730" y="345" width="1255" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1600400819702" />
+    <state x="1279" y="556" key="#xdebugger.evaluate" timestamp="1600416786180">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="1279" y="556" key="#xdebugger.evaluate/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1600416786180" />
+    <state x="1007" y="394" key="FileChooserDialogImpl" timestamp="1600935103916">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1007" y="394" key="FileChooserDialogImpl/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1600935103916" />
     <state x="1007" y="394" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1598081668186" />
-    <state width="2507" height="363" key="GridCell.Tab.0.bottom" timestamp="1595521464260">
+    <state width="2509" height="476" key="GridCell.Tab.0.bottom" timestamp="1605606997062">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2507" height="363" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1595521464260" />
-    <state width="2507" height="363" key="GridCell.Tab.0.center" timestamp="1595521464260">
+    <state width="2509" height="476" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1605606997062" />
+    <state width="2509" height="476" key="GridCell.Tab.0.center" timestamp="1605606997060">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2507" height="363" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1595521464260" />
-    <state width="2507" height="363" key="GridCell.Tab.0.left" timestamp="1595521464260">
+    <state width="2509" height="476" key="GridCell.Tab.0.center/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1605606997060" />
+    <state width="2509" height="476" key="GridCell.Tab.0.left" timestamp="1605606997060">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2507" height="363" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1595521464260" />
-    <state width="2507" height="363" key="GridCell.Tab.0.right" timestamp="1595521464260">
+    <state width="2509" height="476" key="GridCell.Tab.0.left/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1605606997060" />
+    <state width="2509" height="476" key="GridCell.Tab.0.right" timestamp="1605606997061">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2507" height="363" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1595521464260" />
-    <state width="2507" height="363" key="GridCell.Tab.1.bottom" timestamp="1595521464261">
+    <state width="2509" height="476" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1605606997061" />
+    <state width="2509" height="476" key="GridCell.Tab.1.bottom" timestamp="1605606997062">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2507" height="363" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1595521464261" />
-    <state width="2507" height="363" key="GridCell.Tab.1.center" timestamp="1595521464261">
+    <state width="2509" height="476" key="GridCell.Tab.1.bottom/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1605606997062" />
+    <state width="2509" height="476" key="GridCell.Tab.1.center" timestamp="1605606997062">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2507" height="363" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1595521464261" />
-    <state width="2507" height="363" key="GridCell.Tab.1.left" timestamp="1595521464260">
+    <state width="2509" height="476" key="GridCell.Tab.1.center/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1605606997062" />
+    <state width="2509" height="476" key="GridCell.Tab.1.left" timestamp="1605606997062">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2507" height="363" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1595521464260" />
-    <state width="2507" height="363" key="GridCell.Tab.1.right" timestamp="1595521464261">
+    <state width="2509" height="476" key="GridCell.Tab.1.left/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1605606997062" />
+    <state width="2509" height="476" key="GridCell.Tab.1.right" timestamp="1605606997062">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2507" height="363" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1595521464261" />
-    <state x="632" y="137" key="SettingsEditor" timestamp="1597237401332">
+    <state width="2509" height="476" key="GridCell.Tab.1.right/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1605606997062" />
+    <state x="632" y="137" key="SettingsEditor" timestamp="1600401607983">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="632" y="137" key="SettingsEditor/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1600401607983" />
     <state x="632" y="137" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1597237401332" />
     <state x="848" y="295" width="863" height="846" key="find.popup" timestamp="1598654936263">
       <screen x="0" y="0" width="2560" height="1400" />
